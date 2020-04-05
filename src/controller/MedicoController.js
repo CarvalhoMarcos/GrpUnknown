@@ -1,26 +1,30 @@
 const Usuario = require("../models/Usuario");
-const bcrypt = require("bcryptjs");
 const Medico = require("../models/Medico");
+const database = require("../database/index")
+const bcrypt = require("bcryptjs");
+// const Sequelize = require("sequelize");
 module.exports={
     async index(req,res){
+      
       const {id} = req.params;
       if(id ==undefined){
-        const usuarios = await Usuario.findAll({attributes: ["nome", "cpf","email","tipo_usuario"]});
-
-        return res.status(200).json(usuarios);
+        const [results, metadata] = await database.query(`Select M.cpf, U.nome, U.email,M.crm,M.eh_docente,
+         M.titulo_uni from medicos M inner join usuarios U on(U.cpf =U.cpf) where U.tipo_usuario='M'`);
+      
+        return res.status(200).json(results);
       }
       else{
-        const usuarios = await Usuario.findAll({attributes: ["nome", "cpf","email","tipo_usuario"],where:{
-          cpf: id}});
-
-        return res.status(200).json(usuarios);
+        const [results, metadata] = await database.query(`Select M.cpf, U.nome, U.email,M.crm,M.eh_docente,
+        M.titulo_uni from medicos M inner join usuarios U on(U.cpf =U.cpf) where U.tipo_usuario='M' and M.cpf='${id}'`);
+     
+       return res.status(200).json(results);
       }
 
     },
 
   async store(req,res){
     console.log(req.body);
-    const {cpf,nome,email,tipo_usuario,password,sexo,cor} = req.body;
+    const {cpf,nome,email,tipo_usuario,password,sexo,cor,crm,eh_docente,titulo_uni} = req.body;
 
     try{
     const password_hash = await bcrypt.hash(password, 8);   
@@ -32,17 +36,21 @@ module.exports={
       tipo_usuario:tipo_usuario
     }});
 
-    
+
     if (usuario_existe) {
       res.status(400).json({ error: "Usuario ja cadastrado" });
     }
     else{
-    await Usuario.create({ cpf, nome, email, tipo_usuario, password_hash ,sexo, cor });
+    const usuario = await Usuario.create({ cpf, nome, email, tipo_usuario, password_hash ,sexo, cor });
+    const medico = await Medico.create({cpf,crm,eh_docente,titulo_uni});
     
-    return res.json({result:"Cadastro executado"});
+    medico.addUsuario(usuario);
+    
+    return res.json({result:"Cadastro do medico concluido"});
   }
   }
   catch(err){
+    console.log(err)
     return res.json({error: err});
   }
   },
@@ -51,18 +59,15 @@ module.exports={
   },
   async destroy(req,res){
     const auth = req.headers.authorization;
-    const {cpf,tipo_usuario} = req.params;
-   
+    const {cpf} = req.params;
     if(auth=="root" || auth ==cpf){
       const usuario = await Usuario.destroy({where:{
         cpf:cpf,
-        tipo_usuario:tipo_usuario
+        tipo_usuario:'M'
       }})
-      if(tipo_usuario =="M"){
-        await Medico.destroy({where:{
-          cpf:cpf
-        }})
-      }
+      await Medico.destroy({where:{
+        cpf:cpf
+      }})
       if(usuario==1){
         return res.json("Usuario Removido");
       }

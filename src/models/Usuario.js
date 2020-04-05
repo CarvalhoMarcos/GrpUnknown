@@ -21,11 +21,11 @@ class usuario extends Model {
       }
     );
   }
-  // static associate(models) {
-  //   this.hasMany(models.address, {
-  //     foreignKey: "userId",
-  //     as: "addresses",
-  //   });
+  static associate(models) {
+    this.belongsTo(models.medico, {
+      foreignKey: "cpf",
+      as: "informacoes"
+    });
   //   this.belongsToMany(models.tech, {
   //     foreignKey: "userId",
   //     through: "userTechs",
@@ -33,7 +33,7 @@ class usuario extends Model {
   //   });
   // }
 }
-
+}
 module.exports = usuario;
 
 // const bcrypt = require("bcryptjs");

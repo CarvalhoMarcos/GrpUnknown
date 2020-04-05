@@ -2,35 +2,23 @@
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable("usuarios", {
+    return queryInterface.createTable("medicos", {
       cpf: {
         type: Sequelize.STRING,
         primaryKey: true,
         allowNull: false,
       },
-      nome: {
-        type: Sequelize.STRING,
+      crm : {
+        type: Sequelize.STRING(12),
         allowNull: false,
       },
-      email: {
-        type: Sequelize.STRING,
+      eh_docente: {
+        type: Sequelize.BOOLEAN,
         allowNull: false,
       },
-      tipo_usuario:{
-        type: Sequelize.STRING(1),
-        allowNull:false,
-        primaryKey:true
-      },
-      password_hash:{
+      titulo_uni : {
         type: Sequelize.STRING,
-        allowNull:false
-      },
-      sexo:{
-        type: Sequelize.STRING(1),
-        allowNull:false,
-      }, cor:{
-        type: Sequelize.STRING,
-        allowNull:false
+        allowNull: false,
       },
       created_at: {
         type: Sequelize.DATE,
@@ -43,6 +31,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable("usuarios");
+    return queryInterface.dropTable("medicos");
   },
 };
