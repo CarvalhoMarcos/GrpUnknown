@@ -3,7 +3,7 @@ const express = require("express");
 const routes = express.Router();
 
 const TestController = require("./controller/TestController");
-// const SessionController = require("./controller/SessionController");
+ const SessionController = require("./controller/SessionController");
 const UserController = require("./controller/UserController");
 const MedicoController = require("./controller/MedicoController");
 const ResidenteController = require("./controller/ResidenteController")
@@ -23,6 +23,7 @@ routes.delete("/residente/:cpf/",ResidenteController.destroy);
 routes.get("/residente/:id?",ResidenteController.index);
 routes.post("/residente",ResidenteController.store);
 
+routes.post("/login",SessionController.login)
 
 
 
