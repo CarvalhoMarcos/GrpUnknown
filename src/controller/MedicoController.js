@@ -9,13 +9,13 @@ module.exports={
       const {id} = req.params;
       if(id ==undefined){
         const [results, metadata] = await database.query(`Select M.cpf, U.nome, U.email,M.crm,M.eh_docente,
-         M.titulo_uni from medicos M inner join usuarios U on(U.cpf =U.cpf) where U.tipo_usuario='M'`);
+         M.titulo_uni from medicos M inner join usuarios U on(M.cpf =U.cpf) where U.tipo_usuario='M'`);
       
         return res.status(200).json(results);
       }
       else{
         const [results, metadata] = await database.query(`Select M.cpf, U.nome, U.email,M.crm,M.eh_docente,
-        M.titulo_uni from medicos M inner join usuarios U on(U.cpf =U.cpf) where U.tipo_usuario='M' and M.cpf='${id}'`);
+        M.titulo_uni from medicos M inner join usuarios U on(M.cpf =U.cpf) where U.tipo_usuario='M' and M.cpf='${id}'`);
      
        return res.status(200).json(results);
       }
