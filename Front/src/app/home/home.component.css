@@ -1,44 +1,52 @@
 .split{
     height: 100%;
     width: 50%;
-    position: fixed;
+    
 }
 
 .centered{
     text-align: center;
 }
-
+.rounded-circle{
+    padding: 10px;
+}
+.form-control{
+    width: 250px;
+    display: inline-block;
+}
 .login{
     display: inline-block;
 
-    margin-top: 150px;
-    margin-bottom: 50px;
-    padding: 50px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    padding: 0px;
 
-    /* elipse */
+     /*elipse 
     border: 1px solid #707070;
-    border-radius: 50%;
+    border-radius: 100%;
+    */
 }
 
+
+/*
 .login img{  
     width: 164px;
 }
-
+*/
 .pharmacy{
-    margin-top: 100px;
+    margin-top: 50px;
 }
-
+/*
 .pharmacy img{
     width: 470px;
 }
-
+*/
 .title{
-    margin-top: 100px;
-    margin-left: 50px;
+    margin-top: 75px;
+    margin-left: 35px;
     text-align: left;
-    font-size: 80px;
+    font-size: 50px;
     font-family: Helvetica, sans-serif;
-    letter-spacing: 0;
     color: #FFFFFF;
     text-transform: capitalize;
     opacity: 0.9;
@@ -48,29 +56,25 @@
     margin-top: 50px;
     padding: 15px 15px; 
 
-    width: 550px;
+    width: 500px;
 
 
     border: 1px solid #707070;
     opacity: 0.78;
 
     /* text-align: left; */
-    font-size: 30px;
     letter-spacing: 0;
     color: #707070;
     opacity: 0.75;
 }
 
 .button{
-    margin-top: 100px;
-    padding: 10px 60px;
-    
+
     background: #A74B4B 0% 0% no-repeat padding-box;
     border: 1px solid #707070;
     opacity: 1;
 
-    text-align: center;
-    font: Bold 40px/47px Consolas;
+    font: Bold Consolas;
     letter-spacing: 0;
     color: #FFFFFF;
     text-transform: uppercase;
@@ -78,15 +82,14 @@
 }
 
 .left{
-    left: 0;
-
+    
     background: #A74B4B 0% 0% no-repeat padding-box;
     border: 1px solid #707070;
     opacity: 1;
 }
 
 .right{
-    right:   0;
+    right:   0px;
 
     background: #FFFFFF 0% 0% no-repeat padding-box;
     opacity: 1;
