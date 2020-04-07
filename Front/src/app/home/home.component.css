@@ -6,6 +6,7 @@
 
 .centered{
     text-align: center;
+    vertical-align: auto;
 }
 .rounded-circle{
     padding: 10px;

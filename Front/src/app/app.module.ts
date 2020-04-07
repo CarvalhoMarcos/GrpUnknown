@@ -8,13 +8,21 @@ import { NavegationBarComponent } from './navegation-bar/navegation-bar.componen
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
+import { AdmPageComponent } from './adm-page/adm-page.component';
+import { FormAlunoComponent } from './form-aluno/form-aluno.component';
+import { FormMedicoComponent } from './form-medico/form-medico.component';
+import { FormProfessorComponent } from './form-professor/form-professor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavegationBarComponent,
     FooterComponent,
-    SideBarComponent
+    SideBarComponent,
+    AdmPageComponent,
+    FormAlunoComponent,
+    FormMedicoComponent,
+    FormProfessorComponent
   ],
   imports: [
     BrowserModule,
