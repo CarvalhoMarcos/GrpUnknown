@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./adm-page.component.css']
 })
 export class AdmPageComponent implements OnInit {
-
+  opened = false;
   constructor() { }
 
   ngOnInit(): void {

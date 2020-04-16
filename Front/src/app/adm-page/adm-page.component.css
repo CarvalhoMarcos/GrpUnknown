@@ -3,3 +3,22 @@
     display: inline-block;
     vertical-align: middle;
 }
+
+mat-sidenav-container{
+    height: 100%;
+}
+mat-sidenav, mat-sidenav-content{
+    padding: 16px;
+}
+mat-sidenav{
+    background-color: #A74B4B;
+    width: 200px;
+}
+mat-toolbar{
+    background-color: #A74B4B;
+}
+.botaoFim {
+    position: absolute;
+    right: 10px;
+    margin: 0;
+  }
