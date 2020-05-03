@@ -1,3 +1,31 @@
-.navbar-image-user {
-    margin-left: 90%;
+
+button{
+    
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #A74B4B;
+    border: 0px;
+}
+mat-icon{
+  color: #ffffff;
+  display: flex;
+  vertical-align: middle;
+  margin: 5px;
+}
+
+mat-toolbar{
+    background-color: #A74B4B;
+    display: flex;
+    justify-content: center;
+    
+}
+.botaoFim {
+    position: absolute;
+    right: 10px;
   }
+
+.titulo-centro{
+  color: #ffffff;
+  flex: 1 1 auto;
+  text-align: center;
+}

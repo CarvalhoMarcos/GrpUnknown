@@ -10,12 +10,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AdmPageComponent } from './adm-page/adm-page.component';
-import { AdmModuleModule } from './adm-module/adm-module.module';
 import { ComponentesComunsModule } from './componentes-comuns-module/componentes-comuns.module';
 import { HomeComponent } from './home/home.component';
-import { MedModuleModule } from './med-module/med-module.module';
-import { ProfModuleModule } from './prof-module/prof-module.module';
-import { AlunoModuleModule } from './aluno-module/aluno-module.module';
+
 import { LoginComponent } from './login/login.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -23,8 +20,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 
-
-
+import { AlunoModule } from './aluno/aluno.module';
+import { MedModule } from './med/med.module';
+import { ProfModule } from './prof/prof.module';
+import { AdmModule } from './adm/adm.module';
 
 
 
@@ -33,7 +32,8 @@ import { MatButtonModule } from '@angular/material/button';
     AppComponent,
     AdmPageComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -41,18 +41,18 @@ import { MatButtonModule } from '@angular/material/button';
     FormsModule,
     ReactiveFormsModule,
     ComponentesComunsModule,
-    AdmModuleModule,
-    MedModuleModule,
-    ProfModuleModule,
-    AlunoModuleModule,
     BrowserAnimationsModule,
     MatSidenavModule,
     MatToolbarModule,
     MatListModule,
     MatButtonModule,
     MatIconModule,
-    
-    //HttpModule,
+    AlunoModule,
+    MedModule,
+    ProfModule,
+    AdmModule,
+    //HttpModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

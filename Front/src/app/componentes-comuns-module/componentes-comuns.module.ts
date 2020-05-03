@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { FooterComponent } from './footer/footer.component';
 import { NavegationBarComponent } from './navegation-bar/navegation-bar.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 
 //import { SidenavComponent } from './sidenav/sidenav.component';
 //import { MatSidenavModule } from '@angular/material/sidenav';
@@ -15,7 +17,9 @@ import { NavegationBarComponent } from './navegation-bar/navegation-bar.componen
   declarations: [FooterComponent, 
                  NavegationBarComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    MatToolbarModule,
+    MatIconModule
   ],
   exports:[FooterComponent, NavegationBarComponent]
 })

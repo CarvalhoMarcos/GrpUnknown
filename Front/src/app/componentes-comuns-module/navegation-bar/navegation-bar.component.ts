@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-navegation-bar',
@@ -6,8 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navegation-bar.component.css']
 })
 export class NavegationBarComponent implements OnInit {
+  @Input('opened') opened = false;
+  @Input('titulo') titulo : string = '';
 
-  constructor() { }
+  constructor() { 
+   
+  }
 
   ngOnInit(): void {
   }
