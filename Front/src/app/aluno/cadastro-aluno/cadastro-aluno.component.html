@@ -13,10 +13,13 @@
             <input class="form-control" name="nome" placeholder="Nome" type="text" [(ngModel)]="request.nome"/>
         </div>
         <div class="form-group ">
-            <input class="form-control" name="matricula" placeholder="Matricula" type="number" [(ngModel)]="request.email"/>
+            <input class="form-control" name="matricula" placeholder="Matricula" type="number" [(ngModel)]="request.matricula"/>
         </div>
         <div class="form-group ">
-            <input class="form-control" name="dataDeNascimento" placeholder="Data de Nascimento" type="date" [(ngModel)]="request.email"/>
+            <input class="form-control" name="email" placeholder="E-mail" type="string" [(ngModel)]="request.email"/>
+        </div>
+        <div class="form-group ">
+            <input class="form-control" name="dataDeNascimento" placeholder="Data de Nascimento" type="date" [(ngModel)]="request.data_de_nascimento"/>
         </div>
         <div class="form-group ">
             <input class="form-control" name="senha" placeholder="Senha" type="password" [(ngModel)]="request.password"/>
