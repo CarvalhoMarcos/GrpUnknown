@@ -2,6 +2,7 @@ const Usuario = require("../models/Usuario");
 const Medico = require("../models/Medico");
 const database = require("../database/index");
 const bcrypt = require("bcryptjs");
+const moment = require("moment");
 // const Sequelize = require("sequelize");
 module.exports = {
   async index(req, res) {
@@ -33,6 +34,7 @@ module.exports = {
       email,
       tipo_usuario,
       password,
+      data_nasc,
       sexo,
       cor,
       crm,
@@ -40,6 +42,9 @@ module.exports = {
       titulo_uni,
     } = req.body;
 
+    let data = moment(data_nasc, "DD/MM/YYYY");
+
+    data = new Date(data);
     try {
       const password_hash = await bcrypt.hash(password, 8);
 
@@ -61,9 +66,11 @@ module.exports = {
           email,
           tipo_usuario,
           password_hash,
+          data_nasc: data,
           sexo,
           cor,
         });
+
         const medico = await Medico.create({
           cpf,
           crm,
