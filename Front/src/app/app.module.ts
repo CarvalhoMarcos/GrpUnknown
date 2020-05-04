@@ -38,7 +38,7 @@ import { AdmModule } from './adm/adm.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
+    
     ReactiveFormsModule,
     ComponentesComunsModule,
     BrowserAnimationsModule,
@@ -51,7 +51,8 @@ import { AdmModule } from './adm/adm.module';
     MedModule,
     ProfModule,
     AdmModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
 
   ],
   providers: [],

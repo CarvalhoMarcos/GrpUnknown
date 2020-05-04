@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { RequestCreateAluno } from '../aluno.model';
+import { RequestCreateAluno, ResponseCreateAluno } from '../aluno.model';
+import { AlunosService } from '../alunos.service';
 
 @Component({
   selector: 'app-cadastro-aluno',
@@ -7,21 +8,22 @@ import { RequestCreateAluno } from '../aluno.model';
   styleUrls: ['./cadastro-aluno.component.css']
 })
 export class CadastroAlunoComponent implements OnInit {
-  request: RequestCreateAluno={
-    cpf:'',
-    nome:'',
-    email:'',
-    matricula:'',
-    tipo_usuario:'R',
-    data_de_nascimento:'',
-    password:'',
-    sexo:'',
-    cor:'',
-    ano_res:''
+  request: RequestCreateAluno = {
+    cpf: "",
+    nome: "",
+    email: "",
+    tipo_usuario: "R",
+    password: "",
+    sexo: "",
+    cor: "",
+    ano_res: ""
   }
-  constructor() { }
+  response: ResponseCreateAluno;
+  constructor(private alunoService: AlunosService) { }
 
   ngOnInit(): void {
   }
-
+  salvar() {
+    this.alunoService.cadastrarAluno(this.request).subscribe(res => { this.response = res });
+  }
 }
