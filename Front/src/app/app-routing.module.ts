@@ -6,6 +6,8 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { AdmPageComponent } from './adm-page/adm-page.component';
 import { CadastroAlunoComponent } from './aluno/cadastro-aluno/cadastro-aluno.component';
+import { CadastroMedComponent } from './med/cadastro-med/cadastro-med.component';
+import { CadastroProfComponent } from './prof/cadastro-prof/cadastro-prof.component';
 import { AlunoComponent } from './aluno/aluno.component';
 
 
@@ -17,8 +19,8 @@ const routes: Routes = [
   { path: 'adm', component: AdmPageComponent },
   { path: 'adm/cad-aluno', component: CadastroAlunoComponent },
   { path: 'veralunos', component: AlunoComponent },
-
-];
+  { path: 'adm/cad-med', component: CadastroMedComponent },
+  { path: 'adm/cad-prof', component: CadastroProfComponent },];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

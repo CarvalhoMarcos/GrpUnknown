@@ -1,7 +1,6 @@
-<p>cadastro-med works!</p>
-
 
 <div class="container col-md-6">
+
     <form> 
         <div class="container">
             <button class="button" style="margin: 15px" type="submit">Cadastrar</button>
@@ -9,26 +8,36 @@
         </div>
 
         <div class="form-group ">
-            <input class="form-control" name="cpf" placeholder="CPF" type="text" />
+            <input class="form-control" name="cpf" placeholder="CPF" type="text" [(ngModel)]="request.cpf"/>
         </div>
         <div class="form-group ">
-            <input class="form-control" name="nome" placeholder="Nome" type="text" />
+            <input class="form-control" name="nome" placeholder="Nome" type="text" [(ngModel)]="request.nome"/>
         </div>
         <div class="form-group ">
-            <input class="form-control" name="crm" placeholder="Crm" type="number" />
+            <input class="form-control" name="crm" placeholder="CRM" type="number" [(ngModel)]="request.email"/>
         </div>
         <div class="form-group ">
-            <input class="form-control" name="dataDeNascimento" placeholder="Data de Nascimento" type="date" />
+            <input class="form-control" name="dataDeNascimento" placeholder="Data de Nascimento" type="date" [(ngModel)]="request.email"/>
         </div>
         <div class="form-group ">
-            <input class="form-control" name="senha" placeholder="Senha" type="password" />
+            <input class="form-control" name="senha" placeholder="Senha" type="password" [(ngModel)]="request.password"/>
         </div>
         <div class="form-group ">
-            <input class="form-control" name="cor" placeholder="Cor" type="text" />
+            <input class="form-control" name="cor" placeholder="Cor" type="text" [(ngModel)]="request.cor"/>
         </div>
         <div class="form-group ">
-            <input class="form-control" name="sexo" placeholder="Sexo" type="text" />
+            <input class="form-control" name="sexo" placeholder="Sexo" type="text" [(ngModel)]="request.sexo"/>
         </div>
-
+        <div class="form-group ">
+            <input class="form-control" name="email" placeholder="Data limte Residência" type="number" [(ngModel)]="request.email"/>
+        </div>
+        <div class="form-check ">
+            <input class="form-check-input" id="ehDocente" type="checkbox" [(ngModel)]="request.ano_res"/>
+            <label class="form-check-label" for="ehDocente">É docente?</label>
+        </div>
+        <div class="form-group ">
+            <input class="form-control" name="tituloDocente" placeholder="Título do Docente" type="text" [(ngModel)]="request.ano_res"/>
+        </div>
     </form>
+
 </div>
