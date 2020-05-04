@@ -1,9 +1,12 @@
 export interface Aluno {
-
+    cpf: string;
+    nome: string;
+    email: string;
+    ano_res: string;
 }
 
 export interface ResponseAlunos {
-
+    alunos:[];
 }
 
 export interface RequestCreateAluno {
