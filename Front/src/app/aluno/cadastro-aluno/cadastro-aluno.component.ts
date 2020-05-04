@@ -19,6 +19,7 @@ export class CadastroAlunoComponent implements OnInit {
     ano_res: ""
   }
   response: ResponseCreateAluno;
+
   constructor(private alunoService: AlunosService) { }
 
   ngOnInit(): void {
@@ -26,4 +27,6 @@ export class CadastroAlunoComponent implements OnInit {
   salvar() {
     this.alunoService.cadastrarAluno(this.request).subscribe(res => { this.response = res });
   }
+  
+  
 }

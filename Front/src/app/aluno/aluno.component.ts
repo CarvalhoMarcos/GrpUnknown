@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AlunosService } from './alunos.service';
-import { ResponseAlunos } from './aluno.model';
+import { ResponseAlunos, ResponseAluno } from './aluno.model';
 
 @Component({
   selector: 'app-aluno',
@@ -8,13 +8,21 @@ import { ResponseAlunos } from './aluno.model';
   styleUrls: ['./aluno.component.css']
 })
 export class AlunoComponent implements OnInit {
-  responseAlunos : ResponseAlunos;
-  responseAluno : Response
-
-  constructor(private alunoService : AlunosService) { }
+  responseAlunos: ResponseAlunos;
+  responseAluno: ResponseAluno;
+  cpf: '';
+  constructor(private alunoService: AlunosService) { }
 
   ngOnInit(): void {
-    this.alunoService.getAllAlunos().subscribe(res => this.responseAlunos = res);
+
+  }
+
+  getTodosALunos() {
+    this.alunoService.getAllAlunos().subscribe(res => {this.responseAlunos = res});
+  }
+
+  getAlunosPorCPF() {
+    this.alunoService.getAluno(this.cpf).subscribe(res => {this.responseAluno = res});
   }
 
 }

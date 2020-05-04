@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { RequestCreateMedico, ResponseCreateMedico } from '../med.model';
+import { MedService } from '../med.service';
 
 @Component({
   selector: 'app-cadastro-med',
@@ -6,10 +8,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cadastro-med.component.css']
 })
 export class CadastroMedComponent implements OnInit {
+  request : RequestCreateMedico = {
+    cpf: "",
+    nome: "",
+    email: "",
+    tipo_usuario: "M",
+    password: "",
+    sexo: "",
+    cor: "",
+    crm: "",
+    eh_docente: false,
+    titulo_uni: ""
+  }
+  response : ResponseCreateMedico;
 
-  constructor() { }
+  constructor(private medicoService : MedService) { }
 
   ngOnInit(): void {
   }
-
+  salvar(){
+    this.medicoService.cadastrarMedico(this.request).subscribe(res => { this.response = res });
+  }
 }

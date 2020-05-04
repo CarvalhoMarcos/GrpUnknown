@@ -1,4 +1,4 @@
-export interface Aluno {
+export interface ResponseAluno {
     cpf: string;
     nome: string;
     email: string;
