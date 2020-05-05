@@ -7,13 +7,14 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatListModule } from "@angular/material/list";
 
-import { NavegationBarComponent } from "./navegation-bar/navegation-bar.component";
 import { FooterComponent } from "./footer/footer.component";
+import { NavegationBarComponent } from "./navegation-bar/navegation-bar.component";
+import { SidenavComponent } from "./sidenav/sidenav.component";
 
 //import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [FooterComponent, NavegationBarComponent],
+  declarations: [FooterComponent, NavegationBarComponent, SidenavComponent],
   imports: [
     CommonModule,
     MatToolbarModule,
@@ -22,6 +23,6 @@ import { FooterComponent } from "./footer/footer.component";
     MatSidenavModule,
     MatListModule,
   ],
-  exports: [FooterComponent, NavegationBarComponent],
+  exports: [FooterComponent, NavegationBarComponent, SidenavComponent],
 })
 export class ComponentesComunsModule {}

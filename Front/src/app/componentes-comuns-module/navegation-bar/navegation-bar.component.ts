@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from "@angular/core";
   styleUrls: ["./navegation-bar.component.css"],
 })
 export class NavegationBarComponent implements OnInit {
-  @Input("opened") opened = false;
+  // @Input("opened") opened = false;
   @Input("titulo") titulo: string = "";
 
   constructor() {}
