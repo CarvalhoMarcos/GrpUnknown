@@ -15,10 +15,6 @@
   top: 0;
   z-index: 1;
 }
-.title {
-  flex: 1 1 auto;
-  text-align: center;
-}
 
 /* mat-sidenav-container{
   height: 100%;
