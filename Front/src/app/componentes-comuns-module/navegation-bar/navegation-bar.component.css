@@ -1,30 +1,28 @@
-
-button{
-    
-    display: inline-block;
-    vertical-align: middle;
-    background-color: #A74B4B;
-    border: 0px;
+button {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #a74b4b;
+  border: 0px;
 }
-mat-icon{
+mat-icon {
   color: #ffffff;
   display: flex;
   vertical-align: middle;
   margin: 5px;
 }
 
-mat-toolbar{
-    background-color: #A74B4B;
-    display: flex;
-    justify-content: center;
-    
+mat-toolbar {
+  background-color: #a74b4b;
+  display: flex;
+  justify-content: center;
 }
 .botaoFim {
-    position: absolute;
-    right: 10px;
-  }
+  color: #ffffff;
+  position: absolute;
+  right: 10px;
+}
 
-.titulo-centro{
+.titulo-centro {
   color: #ffffff;
   flex: 1 1 auto;
   text-align: center;
