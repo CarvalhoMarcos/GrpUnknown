@@ -52,7 +52,8 @@ import { AdmModule } from './adm/adm.module';
     ProfModule,
     AdmModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    
 
   ],
   providers: [],
