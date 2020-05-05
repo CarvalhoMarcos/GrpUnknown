@@ -1,27 +1,27 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
 
-import { FooterComponent } from './footer/footer.component';
-import { NavegationBarComponent } from './navegation-bar/navegation-bar.component';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from "@angular/material/toolbar";
+import { MatIconModule } from "@angular/material/icon";
+import { MatButtonModule } from "@angular/material/button";
+import { MatSidenavModule } from "@angular/material/sidenav";
+import { MatListModule } from "@angular/material/list";
 
-//import { SidenavComponent } from './sidenav/sidenav.component';
-//import { MatSidenavModule } from '@angular/material/sidenav';
+import { NavegationBarComponent } from "./navegation-bar/navegation-bar.component";
+import { FooterComponent } from "./footer/footer.component";
+
 //import { FormsModule } from '@angular/forms';
 
-
-
-
 @NgModule({
-  declarations: [FooterComponent, 
-                 NavegationBarComponent],
+  declarations: [FooterComponent, NavegationBarComponent],
   imports: [
     CommonModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatListModule,
   ],
-  exports:[FooterComponent, NavegationBarComponent]
+  exports: [FooterComponent, NavegationBarComponent],
 })
-
-export class ComponentesComunsModule { }
+export class ComponentesComunsModule {}
