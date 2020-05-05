@@ -2,9 +2,9 @@ import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 
 import { MatToolbarModule } from "@angular/material/toolbar";
-import { MatIconModule } from "@angular/material/icon";
 import { MatButtonModule } from "@angular/material/button";
 import { MatSidenavModule } from "@angular/material/sidenav";
+import { MatIconModule } from "@angular/material/icon";
 import { MatListModule } from "@angular/material/list";
 
 import { FooterComponent } from "./footer/footer.component";
@@ -18,9 +18,9 @@ import { SidenavComponent } from "./sidenav/sidenav.component";
   imports: [
     CommonModule,
     MatToolbarModule,
-    MatIconModule,
     MatButtonModule,
     MatSidenavModule,
+    MatIconModule,
     MatListModule,
   ],
   exports: [FooterComponent, NavegationBarComponent, SidenavComponent],
