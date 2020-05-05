@@ -1,19 +1,15 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input } from "@angular/core";
 
 @Component({
-  selector: 'app-navegation-bar',
-  templateUrl: './navegation-bar.component.html',
-  styleUrls: ['./navegation-bar.component.css']
+  selector: "app-navegation-bar",
+  templateUrl: "./navegation-bar.component.html",
+  styleUrls: ["./navegation-bar.component.css"],
 })
 export class NavegationBarComponent implements OnInit {
-  @Input('opened') opened = false;
-  @Input('titulo') titulo : string = '';
+  @Input("opened") opened = false;
+  @Input("titulo") titulo: string = "";
 
-  constructor() { 
-   
-  }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
