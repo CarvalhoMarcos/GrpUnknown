@@ -1,16 +1,9 @@
 <mat-toolbar>
-    <mat-toolbar-row>
-        <button mat-icon-button>
-            <mat-icon>menu</mat-icon>
-        </button>
-        <div class="titulo-centro">
-            <h2>{{titulo}}</h2>
-        </div>
-        <div class="botaoFim">
-            <button mat-button>
-                <a href="#">Sair</a>
-            </button>
-        </div>
+  <button type="button" aria-label="Toggle sidenav" mat-icon-button>
+    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+  </button>
 
-    </mat-toolbar-row>
+  <h2 class="titulo-centro">{{ titulo }}</h2>
+
+  <a class="botaoFim" mat-button href="#">Sair</a>
 </mat-toolbar>

@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     FormsModule
-  ]
+  ],
+  exports:[CadastroProfComponent]
 })
 export class ProfModule { }

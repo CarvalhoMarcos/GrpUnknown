@@ -30,6 +30,7 @@ import { AlunoRoutingModule } from './aluno/aluno-routing.module';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

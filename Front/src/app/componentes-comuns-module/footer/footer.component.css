@@ -1,4 +1,9 @@
-footer{
+mat-toolbar {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* footer{
     font-size: 12px;
     font-weight: bold;
-}
+} */

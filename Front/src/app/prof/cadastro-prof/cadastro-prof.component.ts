@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { RequestCreateProf, ResponseCreateProf } from '../prof.model';
+import { ProfService } from '../prof.service';
 
 @Component({
   selector: 'app-cadastro-prof',
@@ -6,10 +8,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cadastro-prof.component.css']
 })
 export class CadastroProfComponent implements OnInit {
+  request : RequestCreateProf = {
+    cpf: "",
+    nome: "",
+    email: "",
+    tipo_usuario: "D",
+    password: "",
+    sexo: "",
+    cor: "",
+    crm: "",
+    eh_docente: true,
+    titulo_uni: ""
+  }
+  response : ResponseCreateProf;
 
-  constructor() { }
+  constructor(private profService : ProfService) { }
 
   ngOnInit(): void {
   }
+  salvar(){
+    this.profService.cadastrarProf(this.request).subscribe(res => { this.response = res });
+  }
+
 
 }
