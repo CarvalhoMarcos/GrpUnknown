@@ -1,6 +1,18 @@
 <!--<app-navegation-bar></app-navegation-bar> 
 <app-side-bar></app-side-bar> -->
+<a>app - html</a>
 
-<body>
-    <router-outlet></router-outlet>
-</body>
+<ul>
+    <li>
+      <a routerLink="/aluno" routerLinkActive="active"> empty </a>
+    </li>
+    <li>
+      <a routerLink="aluno" routerLinkActive="active"> Aluno </a>
+    </li>
+    <button routerLink="aluno" routerLinkActive="active">Teste</button>
+    <button [routerLink]="'/aluno'" routerLinkActive="active">aluno teste</button>
+</ul>
+   
+<router-outlet>
+
+</router-outlet>

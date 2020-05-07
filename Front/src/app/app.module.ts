@@ -20,10 +20,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 
-import { AlunoModule } from './aluno/aluno.module';
 import { MedModule } from './med/med.module';
 import { ProfModule } from './prof/prof.module';
 import { AdmModule } from './adm/adm.module';
+
+import { AlunoModule } from './aluno/aluno.module';
+
+import { AlunoRoutingModule } from './aluno/aluno-routing.module';
 
 
 
@@ -33,7 +36,7 @@ import { AdmModule } from './adm/adm.module';
     AdmPageComponent,
     HomeComponent,
     LoginComponent,
-
+    
   ],
   imports: [
     BrowserModule,
@@ -47,12 +50,13 @@ import { AdmModule } from './adm/adm.module';
     MatListModule,
     MatButtonModule,
     MatIconModule,
-    AlunoModule,
     MedModule,
     ProfModule,
     AdmModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AlunoModule,
+    AlunoRoutingModule   
 
   ],
   providers: [],
