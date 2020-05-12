@@ -7,6 +7,7 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./adm-page.component.css"],
 })
 export class AdmPageComponent implements OnInit {
+  title = "PORTAL DO ADMINISTRADOR";
   // titulo: string = "PORTAL DO ADMINISTRADOR";
   //   opened = false;
   //  @ViewChild('sidenav') sidenav: MatSidenav;

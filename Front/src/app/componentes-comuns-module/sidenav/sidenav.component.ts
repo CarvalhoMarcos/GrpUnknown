@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 import { BreakpointObserver, Breakpoints } from "@angular/cdk/layout";
 import { Observable } from "rxjs";
 import { map, shareReplay } from "rxjs/operators";
@@ -15,6 +15,8 @@ export class SidenavComponent {
       map((result) => result.matches),
       shareReplay()
     );
+
+  @Input() title = "";
 
   constructor(private breakpointObserver: BreakpointObserver) {}
 }

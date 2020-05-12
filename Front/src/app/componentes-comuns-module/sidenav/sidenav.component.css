@@ -4,6 +4,7 @@
 
 .sidenav {
   width: 200px;
+  background: #a74b4b;
 }
 
 .sidenav .mat-toolbar {
@@ -14,6 +15,12 @@
   position: sticky;
   top: 0;
   z-index: 1;
+  background: #a74b4b;
+}
+
+.title {
+  flex: 1 1 auto;
+  text-align: center;
 }
 
 /* mat-sidenav-container{
