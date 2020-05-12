@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class MedService {
-  private url = "localhost:4003/medico";
+  private url = "http://localhost:4003/medico";
 
   constructor(private http: HttpClient) { }
 
