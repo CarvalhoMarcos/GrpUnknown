@@ -3,36 +3,37 @@ const { Model, DataTypes } = require("sequelize");
 class usuario extends Model {
   static init(sequelize) {
     super.init(
-      { cpf:{
-        type:DataTypes.INTEGER,
-        primaryKey:true
-      } ,
-      nome: DataTypes.STRING,
-      email: DataTypes.STRING,
-      tipo_usuario: DataTypes.CHAR,
-      // password: DataTypes.VIRTUAL,
-      password_hash: DataTypes.STRING,
-      sexo: DataTypes.CHAR,
-      cor: DataTypes.STRING
+      {
+        cpf: {
+          type: DataTypes.INTEGER,
+          primaryKey: true,
+        },
+        nome: DataTypes.STRING,
+        email: DataTypes.STRING,
+        tipo_usuario: DataTypes.CHAR,
+        data_nasc: DataTypes.DATE,
+        // password: DataTypes.VIRTUAL,
+        password_hash: DataTypes.STRING,
+        sexo: DataTypes.CHAR,
+        cor: DataTypes.STRING,
       },
       {
         sequelize,
-       
       }
     );
   }
   static associate(models) {
     this.belongsTo(models.medico, {
       foreignKey: "cpf",
-      as: "informacoes"
+      as: "informacoes",
     });
-  //   this.belongsToMany(models.tech, {
-  //     foreignKey: "userId",
-  //     through: "userTechs",
-  //     as: "techs",
-  //   });
-  // }
-}
+    //   this.belongsToMany(models.tech, {
+    //     foreignKey: "userId",
+    //     through: "userTechs",
+    //     as: "techs",
+    //   });
+    // }
+  }
 }
 module.exports = usuario;
 
