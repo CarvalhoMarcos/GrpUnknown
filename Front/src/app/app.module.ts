@@ -27,6 +27,8 @@ import { AdmModule } from './adm/adm.module';
 import { AlunoModule } from './aluno/aluno.module';
 
 import { AlunoRoutingModule } from './aluno/aluno-routing.module';
+import { RouterModule } from '@angular/router';
+import { ProfPageComponent } from './prof-page/prof-page.component';
 
 
 
@@ -37,12 +39,13 @@ import { AlunoRoutingModule } from './aluno/aluno-routing.module';
     AdmPageComponent,
     HomeComponent,
     LoginComponent,
+    ProfPageComponent
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    
+    RouterModule,
     ReactiveFormsModule,
     ComponentesComunsModule,
     BrowserAnimationsModule,

@@ -1,20 +1,6 @@
+<app-sidenav *ngIf="exibeNavBar()" 
+[title]="title" 
+[titulos]="['Médicos','Professores','Alunos']"
+[links]="['/adm/cad-med','/adm/cad-prof', 'adm/cad-aluno']"></app-sidenav>
 <router-outlet></router-outlet>
 
-<!--<app-navegation-bar></app-navegation-bar> 
-<app-side-bar></app-side-bar> -->
-<a>app - html</a>
-
-<ul>
-    <li>
-      <a routerLink="/aluno" routerLinkActive="active"> empty </a>
-    </li>
-    <li>
-      <a routerLink="aluno" routerLinkActive="active"> Aluno </a>
-    </li>
-    <button routerLink="aluno" routerLinkActive="active">Teste</button>
-    <button [routerLink]="'/aluno'" routerLinkActive="active">aluno teste</button>
-</ul>
-   
-<router-outlet>
-
-</router-outlet>

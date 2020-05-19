@@ -1,7 +1,8 @@
-import { Component, Input } from "@angular/core";
+import { Component, Input, ViewChild } from "@angular/core";
 import { BreakpointObserver, Breakpoints } from "@angular/cdk/layout";
 import { Observable } from "rxjs";
 import { map, shareReplay } from "rxjs/operators";
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: "app-sidenav",
@@ -9,16 +10,23 @@ import { map, shareReplay } from "rxjs/operators";
   styleUrls: ["./sidenav.component.css"],
 })
 export class SidenavComponent {
-  isHandset$: Observable<boolean> = this.breakpointObserver
-    .observe(Breakpoints.Handset)
-    .pipe(
-      map((result) => result.matches),
-      shareReplay()
-    );
-
+  @ViewChild(MatSidenav) sidenav: MatSidenav;
+  
+  opened: boolean = true;
   @Input() title = "";
+  @Input() links: string[] = [];
+  @Input() titulos: string[] = [];
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(h => h.test(window.location.host));
+  // isHandset$: Observable<boolean> = this.breakpointObserver
+  // .observe(Breakpoints.Handset)
+  // .pipe(
+  //   map((result) => result.matches),
+  //   shareReplay()
+  // );
+  constructor(private breakpointObserver: BreakpointObserver) { }
+
+  ngOnInit(): void {}
 }
 
 // import { Component, OnInit } from "@angular/core";
@@ -31,5 +39,5 @@ export class SidenavComponent {
 // export class SidenavComponent implements OnInit {
 //   constructor() {}
 
-//   ngOnInit(): void {}
+//   
 // }

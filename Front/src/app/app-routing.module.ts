@@ -11,6 +11,7 @@ import { CadastroProfComponent } from './prof/cadastro-prof/cadastro-prof.compon
 import { AlunoComponent } from './aluno/aluno.component';
 import { CadastroAlunoComponent } from './aluno/cadastro-aluno/cadastro-aluno.component';
 import { DeletarAlunoComponent } from './aluno/deletar-aluno/deletar-aluno.component';
+import { ProfPageComponent } from './prof-page/prof-page.component';
 
 
 
@@ -19,22 +20,11 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'adm', component: AdmPageComponent },
-  //{ path: 'adm/aluno', loadChildren: () => import('./aluno/aluno.module').then(m => m.AlunoModule), data: { preload: true } },
-  { path: 'aluno', component: AlunoComponent,
-      children: [
-        { path: 'cad-aluno', component: CadastroAlunoComponent },
-        { path: 'del-aluno', component: DeletarAlunoComponent },
-      ]
-  },
-  //{ path: 'veralunos', component: AlunoComponent },
   { path: 'adm/cad-med', component: CadastroMedComponent },
   { path: 'adm/cad-prof', component: CadastroProfComponent },
-  {
-    path: '',
-    redirectTo: '',
-    pathMatch: 'full'
-  }]
-  ;
+  { path: 'adm/cad-aluno', component: CadastroAlunoComponent },
+  { path: 'prof', component: ProfPageComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, { enableTracing: false })],

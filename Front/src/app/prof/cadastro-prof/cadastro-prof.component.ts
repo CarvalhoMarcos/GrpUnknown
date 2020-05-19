@@ -12,13 +12,14 @@ export class CadastroProfComponent implements OnInit {
     cpf: "",
     nome: "",
     email: "",
-    tipo_usuario: "D",
+    tipo_usuario: "M",
+    data_nasc : "",
     password: "",
     sexo: "",
     cor: "",
     crm: "",
     eh_docente: true,
-    titulo_uni: ""
+    titulo_uni: "",
   }
   response : ResponseCreateProf;
 

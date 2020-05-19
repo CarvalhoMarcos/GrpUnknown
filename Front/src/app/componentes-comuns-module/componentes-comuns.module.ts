@@ -8,13 +8,15 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatListModule } from "@angular/material/list";
 
 import { FooterComponent } from "./footer/footer.component";
-import { NavegationBarComponent } from "./navegation-bar/navegation-bar.component";
 import { SidenavComponent } from "./sidenav/sidenav.component";
+import { RouterModule } from '@angular/router';
+import { ToolbarComponent } from './app-toolbar/toolbar.component';
+
 
 //import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [FooterComponent, NavegationBarComponent, SidenavComponent],
+  declarations: [FooterComponent, SidenavComponent, ToolbarComponent],
   imports: [
     CommonModule,
     MatToolbarModule,
@@ -22,7 +24,8 @@ import { SidenavComponent } from "./sidenav/sidenav.component";
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    RouterModule
   ],
-  exports: [FooterComponent, NavegationBarComponent, SidenavComponent],
+  exports: [FooterComponent, SidenavComponent,ToolbarComponent],
 })
 export class ComponentesComunsModule {}

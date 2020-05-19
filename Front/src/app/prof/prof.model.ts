@@ -12,6 +12,7 @@ export interface RequestCreateProf{
     nome: string;
     email: string;
     tipo_usuario: string;
+    data_nasc : String;
     password: string;
     sexo: string;
     cor: string;
