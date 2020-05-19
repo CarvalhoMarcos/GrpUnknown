@@ -11,3 +11,15 @@ module.exports = {
   }
 };
 
+/*module.exports = {
+  dialect: "postgres",
+  host: "postgres://postgres:logan@localhost:5432/Hospital",
+  username: "postgres",
+  password: "logan",
+  port: 5432,
+  database: "Hospital",
+  define: {
+    timestamps: true,
+    underscored: true
+  }
+};*/
