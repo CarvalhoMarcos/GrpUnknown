@@ -16,7 +16,9 @@ export class SidenavComponent {
       shareReplay()
     );
 
-  @Input() title = "";
+  @Input() title = String;
+
+  @Input() links = Array;
 
   constructor(private breakpointObserver: BreakpointObserver) {}
 }
