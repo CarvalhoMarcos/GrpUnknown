@@ -26,7 +26,6 @@ import { AdmModule } from './adm/adm.module';
 
 import { AlunoModule } from './aluno/aluno.module';
 
-import { AlunoRoutingModule } from './aluno/aluno-routing.module';
 
 
 
@@ -56,8 +55,7 @@ import { AlunoRoutingModule } from './aluno/aluno-routing.module';
     AdmModule,
     HttpClientModule,
     FormsModule,
-    AlunoModule,
-    AlunoRoutingModule   
+    AlunoModule,   
 
   ],
   providers: [],

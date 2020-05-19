@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AlunosService } from './alunos.service';
 import { ResponseAlunos, ResponseAluno } from './aluno.model';
+import { Router,ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-aluno',
@@ -11,7 +12,10 @@ export class AlunoComponent implements OnInit {
   responseAlunos: ResponseAlunos;
   responseAluno: ResponseAluno;
   cpf: '';
-  constructor(private alunoService: AlunosService) { }
+  constructor(
+    private _Activatedroute:ActivatedRoute,
+    private _router:Router,
+    private alunoService: AlunosService) { }
 
   ngOnInit(): void {
 

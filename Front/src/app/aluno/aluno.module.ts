@@ -7,7 +7,7 @@ import { CadastroAlunoComponent } from './cadastro-aluno/cadastro-aluno.componen
 import { AlunoComponent } from './aluno.component';
 import { DeletarAlunoComponent } from './deletar-aluno/deletar-aluno.component';
 
-import { AlunoRoutingModule } from './aluno-routing.module';
+import { AppRoutingModule } from '../app-routing.module';
 
 
 @NgModule({
@@ -16,7 +16,7 @@ import { AlunoRoutingModule } from './aluno-routing.module';
     CommonModule,
     FormsModule,
     BrowserModule,
-    AlunoRoutingModule,
+    AppRoutingModule
   ],
   exports: [CadastroAlunoComponent, AlunoComponent]
 })
