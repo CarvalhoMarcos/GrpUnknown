@@ -29,6 +29,14 @@ import { AlunoModule } from './aluno/aluno.module';
 import { AlunoRoutingModule } from './aluno/aluno-routing.module';
 import { RouterModule } from '@angular/router';
 import { ProfPageComponent } from './prof-page/prof-page.component';
+import { PacienteComponent } from './paciente/paciente.component';
+import { CadastroPaciComponent } from './paciente/cadastro-paci/cadastro-paci.component';
+import { DeletarPaciComponent } from './paciente/deletar-paci/deletar-paci.component';
+
+import { MedComponent } from './med/med.component';
+import { ProfComponent } from './prof/prof.component';
+
+
 
 
 
@@ -39,7 +47,12 @@ import { ProfPageComponent } from './prof-page/prof-page.component';
     AdmPageComponent,
     HomeComponent,
     LoginComponent,
-    ProfPageComponent
+    ProfPageComponent,
+    PacienteComponent,
+    CadastroPaciComponent,
+    DeletarPaciComponent,
+    MedComponent,
+    ProfComponent
     
   ],
   imports: [

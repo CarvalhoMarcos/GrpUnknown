@@ -1,9 +1,5 @@
 <div class="container col-md-6">
     <form>
-        <div class="container">
-            <button class="button" style="margin: 15px" type="submit" (click)="salvar()">Cadastrar</button>
-            <button class="button" style="margin: 15px" type="submit">Desativar</button>
-        </div>
 
         <div class="form-group ">
             <input class="form-control" name="cpf" placeholder="CPF" type="text" [(ngModel)]="request.cpf" />
@@ -37,6 +33,10 @@
         <div class="form-group ">
             <input class="form-control" name="dataDeResidencia" placeholder="Data limte Residência" type="number"
                 [(ngModel)]="request.ano_res" />
+        </div>
+
+        <div class="container">
+            <button class="button" style="margin: 15px" type="submit" (click)="salvar()">Salvar</button>
         </div>
     </form>
 

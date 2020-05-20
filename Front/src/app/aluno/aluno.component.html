@@ -1,12 +1,12 @@
 <a>aluno - html</a>
 
-<ul>
-    <li>
-      <a [routerLink]="'cad-aluno'" routerLinkActive="active"> Cadastrar </a>
-    </li>
-    <li>
-      <a [routerLink]="'del-aluno'" routerLinkActive="active"> Deletar </a>
-    </li>
-</ul>
+
+<div class="container col-md-6">
+  <div class="container">
+    <button class="button" style="margin: 15px" [routerLink]="'cad-aluno'" routerLinkActive="active">Cadastrar</button>
+    <button class="button" style="margin: 15px" [routerLink]="'del-aluno'" routerLinkActive="active"> Deletar </button>
+  </div>
+
+</div>
 
 <router-outlet></router-outlet>

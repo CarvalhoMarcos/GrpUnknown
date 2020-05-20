@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AlunosService } from './alunos.service';
 import { ResponseAlunos, ResponseAluno } from './aluno.model';
 
+
 @Component({
   selector: 'app-aluno',
   templateUrl: './aluno.component.html',
