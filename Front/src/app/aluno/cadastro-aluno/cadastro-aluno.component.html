@@ -7,19 +7,14 @@
         <div class="form-group ">
             <input class="form-control" name="nome" placeholder="Nome" type="text" [(ngModel)]="request.nome" />
         </div>
-        <!--
-        <div class="form-group ">
-            <input class="form-control" name="matricula" placeholder="Matricula" type="number" [(ngModel)]="request.matricula"/>
-        </div>
-        -->
+
         <div class="form-group ">
             <input class="form-control" name="email" placeholder="E-mail" type="email" [(ngModel)]="request.email" />
         </div>
-        <!--
         <div class="form-group ">
-            <input class="form-control" name="dataDeNascimento" placeholder="Data de Nascimento" type="date" [(ngModel)]="request.data_de_nascimento"/>
+            <input class="form-control" name="dataDeNascimento" placeholder="Data de Nascimento" type="date"
+                [(ngModel)]="request.data_nasc" />
         </div>
-        -->
         <div class="form-group ">
             <input class="form-control" name="senha" placeholder="Senha" type="password"
                 [(ngModel)]="request.password" />
@@ -36,7 +31,7 @@
         </div>
 
         <div class="container">
-            <button class="button" style="margin: 15px" type="submit" (click)="salvar()">Salvar</button>
+            <button class="mat-raised-button" style="margin: 15px" type="submit" (click)="salvar()">Salvar</button>
         </div>
     </form>
 

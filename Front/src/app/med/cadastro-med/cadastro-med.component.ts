@@ -13,6 +13,7 @@ export class CadastroMedComponent implements OnInit {
     nome: "",
     email: "",
     tipo_usuario: "M",
+    data_nasc : "",
     password: "",
     sexo: "",
     cor: "",

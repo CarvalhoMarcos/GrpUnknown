@@ -1,15 +1,12 @@
-export interface ResponseAluno {
+export interface ResponsePaciente{
     cpf: string;
     nome: string;
     email: string;
-    ano_res: string;
+    tipo_usuario : string;
+    data_nasc : string;
 }
 
-export interface ResponseAlunos {
-    alunos:[];
-}
-
-export interface RequestCreateAluno {
+export interface RequestCreatePaciente{
     cpf: string;
     nome: string;
     email: string;
@@ -18,10 +15,9 @@ export interface RequestCreateAluno {
     password: string;
     sexo: string;
     cor: string;
-    ano_res: string;
+    
 }
 
-export interface ResponseCreateAluno {
-
+export interface ResponseCreatePaciente{
+    result : string;
 }
-

@@ -28,7 +28,8 @@ export class CadastroProfComponent implements OnInit {
   ngOnInit(): void {
   }
   salvar(){
-    this.profService.cadastrarProf(this.request).subscribe(res => { this.response = res });
+    let resposta = this.profService.cadastrarProf(this.request).subscribe(res => { this.response = res });
+    alert(resposta);
   }
 
 

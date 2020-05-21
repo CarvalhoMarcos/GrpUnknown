@@ -13,6 +13,7 @@ export class CadastroAlunoComponent implements OnInit {
     nome: "",
     email: "",
     tipo_usuario: "R",
+    data_nasc : "",
     password: "",
     sexo: "",
     cor: "",

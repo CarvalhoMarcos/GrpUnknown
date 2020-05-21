@@ -12,6 +12,7 @@ export interface RequestCreateMedico{
     nome: string;
     email: string;
     tipo_usuario: string;
+    data_nasc : string;
     password: string;
     sexo: string;
     cor: string;

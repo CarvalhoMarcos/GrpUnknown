@@ -36,7 +36,7 @@ module.exports = {
       sexo,
       cor,
     } = req.body;
-    let data = moment(data_nasc, "DD/MM/YYYY");
+    let data = moment(data_nasc, "YYYY/MM/DD");
 
     data = new Date(data);
     try {
