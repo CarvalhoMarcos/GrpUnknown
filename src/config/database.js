@@ -1,4 +1,4 @@
-module.exports = {
+/*module.exports = {
   dialect: "postgres",
   host: "labeng.ciyvym3yvhge.us-east-2.rds.amazonaws.com",
   username: "LabEng",
@@ -9,11 +9,11 @@ module.exports = {
     timestamps:true,
     underscored:true
   }
-};
+};*/
 
-/*module.exports = {
+module.exports = {
   dialect: "postgres",
-  host: "postgres://postgres:logan@localhost:5432/Hospital",
+  host: "localhost",
   username: "postgres",
   password: "logan",
   port: 5432,
@@ -22,4 +22,4 @@ module.exports = {
     timestamps: true,
     underscored: true
   }
-};*/
+};
