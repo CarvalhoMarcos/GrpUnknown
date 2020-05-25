@@ -35,6 +35,11 @@ import { DeletarPaciComponent } from './paciente/deletar-paci/deletar-paci.compo
 
 import { MedComponent } from './med/med.component';
 import { ProfComponent } from './prof/prof.component';
+import { RegistroExamesComponent } from './registro-exames/registro-exames.component';
+import { PedidoExameComponent } from './pedido-exame/pedido-exame.component';
+import { ConsultarPedidoExameComponent } from './pedido-exame/consultar-pedido-exame/consultar-pedido-exame.component';
+import { LaudoMedicoComponent } from './laudo-medico/laudo-medico.component';
+import { ConsultarLaudoMedicoComponent } from './laudo-medico/consultar-laudo-medico/consultar-laudo-medico.component';
 
 
 
@@ -52,7 +57,12 @@ import { ProfComponent } from './prof/prof.component';
     CadastroPaciComponent,
     DeletarPaciComponent,
     MedComponent,
-    ProfComponent
+    ProfComponent,
+    RegistroExamesComponent,
+    PedidoExameComponent,
+    ConsultarPedidoExameComponent,
+    LaudoMedicoComponent,
+    ConsultarLaudoMedicoComponent
     
   ],
   imports: [
