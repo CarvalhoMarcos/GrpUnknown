@@ -28,7 +28,8 @@
     "jest-cucumber": "^2.0.11",
     "nodemon": "^2.0.2",
     "sequelize-cli": "^5.5.1",
-    "supertest": "^4.0.2"
+    "supertest": "^4.0.2",
+    "zombie": "^6.1.4"
   },
   "scripts": {
     "start": "node src/app.js",
@@ -39,8 +40,10 @@
     "testEnvironment": "node",
     "coveragePathIgnorePatterns": [
       "/node_modules/"
-    ],
+    ]
+    ,
     "testMatch": [
+     
       "**/*.steps.js"
     ]
   }
