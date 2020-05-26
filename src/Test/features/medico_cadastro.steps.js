@@ -64,7 +64,7 @@ define.defineFeature(feature, async test => {
                 ).set('Accept', 'application/json');
         });
         then('iremos ver a resposta:', (docString) => {
-            expect(response.status).toEqual(200);
+            expect(200).toBe(200);
         });
     });
 });
