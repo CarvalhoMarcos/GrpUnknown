@@ -12,4 +12,6 @@ export class ConsultarPedidoExameComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  consultar() {}
+
 }

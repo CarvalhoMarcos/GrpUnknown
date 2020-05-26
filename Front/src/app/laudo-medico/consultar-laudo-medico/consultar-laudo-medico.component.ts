@@ -12,4 +12,6 @@ export class ConsultarLaudoMedicoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  consultar() {}
+
 }

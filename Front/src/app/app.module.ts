@@ -35,7 +35,7 @@ import { DeletarPaciComponent } from './paciente/deletar-paci/deletar-paci.compo
 
 import { MedComponent } from './med/med.component';
 import { ProfComponent } from './prof/prof.component';
-import { RegistroExamesComponent } from './registro-exames/registro-exames.component';
+//import { RegistroExamesComponent } from './registro-exames/registro-exames.component';
 import { PedidoExameComponent } from './pedido-exame/pedido-exame.component';
 import { ConsultarPedidoExameComponent } from './pedido-exame/consultar-pedido-exame/consultar-pedido-exame.component';
 import { LaudoMedicoComponent } from './laudo-medico/laudo-medico.component';
@@ -58,12 +58,12 @@ import { ConsultarLaudoMedicoComponent } from './laudo-medico/consultar-laudo-me
     DeletarPaciComponent,
     MedComponent,
     ProfComponent,
-    RegistroExamesComponent,
+    //RegistroExamesComponent,
     PedidoExameComponent,
     ConsultarPedidoExameComponent,
     LaudoMedicoComponent,
     ConsultarLaudoMedicoComponent
-    
+
   ],
   imports: [
     BrowserModule,
@@ -83,7 +83,7 @@ import { ConsultarLaudoMedicoComponent } from './laudo-medico/consultar-laudo-me
     HttpClientModule,
     FormsModule,
     AlunoModule,
-    AlunoRoutingModule   
+    AlunoRoutingModule
 
   ],
   providers: [],

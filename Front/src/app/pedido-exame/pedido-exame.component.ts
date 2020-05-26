@@ -12,4 +12,6 @@ export class PedidoExameComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  salvar() {}
+
 }
