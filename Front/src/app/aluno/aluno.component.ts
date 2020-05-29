@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AlunosService } from './alunos.service';
-import { ResponseAlunos, ResponseAluno } from './aluno.model';
+import { ResponseAlunos, Aluno,  } from './aluno.model';
 
 
 @Component({
@@ -10,20 +10,23 @@ import { ResponseAlunos, ResponseAluno } from './aluno.model';
 })
 export class AlunoComponent implements OnInit {
   responseAlunos: ResponseAlunos;
-  responseAluno: ResponseAluno;
+  responseAluno : Aluno;
   cpf: '';
+
+  alunos: Object[];
+
   constructor(private alunoService: AlunosService) { }
-
+  
   ngOnInit(): void {
-
+    this.getTodosAlunos();
   }
 
-  getTodosALunos() {
-    this.alunoService.getAllAlunos().subscribe(res => {this.responseAlunos = res});
+  getTodosAlunos() {
+    this.alunoService.getAllAlunos().subscribe(res => { this.alunos = res });
   }
 
-  getAlunosPorCPF() {
-    this.alunoService.getAluno(this.cpf).subscribe(res => {this.responseAluno = res});
+  getAlunoPorCPF() {
+    this.alunoService.getAluno(this.cpf).subscribe(res => { this.responseAluno = res });
   }
 
 }

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CadastroProfComponent } from './cadastro-prof/cadastro-prof.component';
 import { FormsModule } from '@angular/forms';
 import { DeletarProfComponent } from './deletar-prof/deletar-prof.component';
+import { MatListModule } from '@angular/material/list';
 
 
 
@@ -10,7 +11,8 @@ import { DeletarProfComponent } from './deletar-prof/deletar-prof.component';
   declarations: [CadastroProfComponent, DeletarProfComponent],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    MatListModule
   ],
   exports:[CadastroProfComponent]
 })

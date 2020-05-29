@@ -11,8 +11,8 @@ export class ProfService {
 
   constructor(private http: HttpClient) { }
 
-  getAllProf(): Observable<ResponseProfs> {
-    return this.http.get<ResponseProfs>(this.url);
+  getAllProf(): Observable<any> {
+    return this.http.get<any>(this.url);
   }
 
   getProf(cpf: string): Observable<ResponseProf> {

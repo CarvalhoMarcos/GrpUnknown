@@ -8,6 +8,7 @@ import { AlunoComponent } from './aluno.component';
 import { DeletarAlunoComponent } from './deletar-aluno/deletar-aluno.component';
 
 import { AlunoRoutingModule } from './aluno-routing.module';
+import { MatListModule } from '@angular/material/list';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { AlunoRoutingModule } from './aluno-routing.module';
     FormsModule,
     BrowserModule,
     AlunoRoutingModule,
+    MatListModule
   ],
   exports: [CadastroAlunoComponent, AlunoComponent]
 })

@@ -1,11 +1,24 @@
 <p>prof works!</p>
+<div class="container">
+  <mat-selection-list [multiple]="false">
+    <!-- Esse NG-Container faz com que possa separa as diretivas do angular
+    ja ue n pode usar o if e for no mesmo componente 
+    estou separando os que sao professores e os que não são antes de
+    exibir na lisra-->
+    <ng-container *ngFor="let professor of professores">
+      <mat-list-option *ngIf="professor.eh_docente === true">
+        {{professor.crm}} - {{professor.nome}}
+      </mat-list-option>
+    </ng-container>
+  </mat-selection-list>
+</div>
 
 <div class="container col-md-6">
-    <div class="container">
-      <button class="button" style="margin: 15px" [routerLink]="'cad-prof'" routerLinkActive="active">Cadastrar</button>
-      <button class="button" style="margin: 15px" [routerLink]="'del-prof'" routerLinkActive="active">Deletar </button>
-    </div>
-  
+  <div class="container">
+    <button class="button" style="margin: 15px" [routerLink]="'cad-prof'" routerLinkActive="active">Cadastrar</button>
+    <button class="button" style="margin: 15px" [routerLink]="'del-prof'" routerLinkActive="active">Deletar </button>
   </div>
-  
-  <router-outlet></router-outlet>
+
+</div>
+
+<router-outlet></router-outlet>

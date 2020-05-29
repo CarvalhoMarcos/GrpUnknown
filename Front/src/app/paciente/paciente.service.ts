@@ -8,12 +8,12 @@ import { ResponsePaciente, RequestCreatePaciente, ResponseCreatePaciente } from 
 })
 export class PacienteService {
 
-  private url = "http://localhost:4003/paciente";
+  private url = "http://localhost:4003/usuario";
 
   constructor(private http: HttpClient) {}
 
-  getAllPacientes(): Observable<ResponsePaciente> {
-    return this.http.get<ResponsePaciente>(this.url);
+  getAllPacientes(): Observable<any> {
+    return this.http.get<any>(this.url);
   }
 
   getPaciente(cpf: string): Observable<ResponsePaciente> {

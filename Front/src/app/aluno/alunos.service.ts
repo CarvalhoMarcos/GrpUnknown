@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { RequestCreateAluno, ResponseCreateAluno, ResponseAlunos, ResponseAluno } from "./aluno.model";
+import { RequestCreateAluno, ResponseCreateAluno, Aluno, ResponseAlunos} from "./aluno.model";
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -8,15 +8,15 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AlunosService {
   private url = "http://localhost:4003/residente/"
-
+  
   constructor(private http: HttpClient) { }
 
-  getAllAlunos(): Observable<ResponseAlunos> {
-    return this.http.get<ResponseAlunos>(this.url);
+  getAllAlunos(): Observable<any> {
+    return this.http.get<any>(this.url);
   }
-  
-  getAluno(cpf: string): Observable<ResponseAluno> {
-    return this.http.get<ResponseAluno>(this.url + "/" + cpf);
+
+  getAluno(cpf: string): Observable<Aluno> {
+    return this.http.get<Aluno>(this.url + "/" + cpf);
   }
 
   cadastrarAluno(request: RequestCreateAluno): Observable<ResponseCreateAluno> {

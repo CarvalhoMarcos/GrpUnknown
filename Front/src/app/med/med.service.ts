@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { ResponseMedico, ResponseMedicos, RequestCreateMedico, ResponseCreateMedico } from './med.model';
+import { Medico, RequestCreateMedico, ResponseCreateMedico } from './med.model';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -11,12 +11,12 @@ export class MedService {
 
   constructor(private http: HttpClient) { }
 
-  getAllMedicos(): Observable<ResponseMedicos> {
-    return this.http.get<ResponseMedicos>(this.url);
+  getAllMedicos(): Observable<any> {
+    return this.http.get<any>(this.url);
   }
 
-  getMedico(cpf: string): Observable<ResponseMedico> {
-    return this.http.get<ResponseMedico>(this.url + "/" + cpf);
+  getMedico(cpf: string): Observable<Medico> {
+    return this.http.get<Medico>(this.url + "/" + cpf);
   }
   
   cadastrarMedico(request: RequestCreateMedico): Observable<ResponseCreateMedico> {

@@ -1,4 +1,4 @@
-export interface ResponseMedico{
+export interface Medico{
     cpf: string;
     nome: string;
     email: string;
@@ -22,7 +22,7 @@ export interface RequestCreateMedico{
 }
 
 export interface ResponseMedicos{
-    medicos : [];
+    medicos : Medico[];
 }
 
 export interface ResponseCreateMedico{

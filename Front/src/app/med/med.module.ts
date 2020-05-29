@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CadastroMedComponent } from './cadastro-med/cadastro-med.component';
 import { FormsModule } from '@angular/forms';
 import { DeletarMedComponent } from './deletar-med/deletar-med.component';
+import { MatListModule } from '@angular/material/list';
 
 
 
@@ -10,7 +11,8 @@ import { DeletarMedComponent } from './deletar-med/deletar-med.component';
   declarations: [CadastroMedComponent, DeletarMedComponent],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    MatListModule
   ],
   exports:[CadastroMedComponent]
 })

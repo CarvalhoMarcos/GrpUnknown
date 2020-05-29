@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MedService } from './med.service';
+
 
 @Component({
   selector: 'app-med',
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./med.component.css']
 })
 export class MedComponent implements OnInit {
+  
+  medicos: Object[];
 
-  constructor() { }
+  constructor(private medicoService: MedService) { }
 
   ngOnInit(): void {
+    this.getTodosMedicos();
+  }
+
+  getTodosMedicos(){
+    this.medicoService.getAllMedicos().subscribe(res => {this.medicos = res});
   }
 
 }

@@ -1,4 +1,4 @@
-export interface ResponseAluno {
+export interface Aluno {
     cpf: string;
     nome: string;
     email: string;
@@ -6,7 +6,7 @@ export interface ResponseAluno {
 }
 
 export interface ResponseAlunos {
-    alunos:[];
+    alunos: Aluno[];
 }
 
 export interface RequestCreateAluno {
