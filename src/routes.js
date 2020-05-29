@@ -29,7 +29,7 @@ routes.get("/tipo_exame", TipoExameController.index);
 routes.post("/tipo_exame", TipoExameController.store);
 
 
-routes.get("/pedidosExame", PedidoExameController.index);
+routes.get("/pedidosExame/:id?", PedidoExameController.index);
 routes.post("/pedidosExame", ensureAuthenticated, PedidoExameController.store);
 routes.post("/login", SessionController.login);
 

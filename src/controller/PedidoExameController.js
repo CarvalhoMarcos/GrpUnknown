@@ -5,20 +5,44 @@ const { v4: uuidv4 } = require('uuid');
 // const Sequelize = require("sequelize");
 module.exports = {
   async index(req, res) {
+    const { id } = req.params;
+    if (id == undefined) {
+      const pedidos_exame = await PedidosExame.findAll({
+        order: [
+          ['data_prev'],
+        ]
+      });
 
-    // const id = req.id;
+      return res.status(200).json(pedidos_exame);
+    } else {
+      const pedidos_exame = await PedidosExame.findAll({
+        where: {
+          paciente_id: id
+        },
+        order: [
+          ['data_prev'],
+        ]
+      });
 
-    // const medico = await Medico.findOne({
-    //   where: {
-    //     cpf: id
-    //   }
+      return res.status(200).json(pedidos_exame);
+    }
+    // // const id = req.id;
+
+    // // const medico = await Medico.findOne({
+    // //   where: {
+    // //     cpf: id
+    // //   }
+    // // });
+    // // if (!!medico) {
+    // const pedidos_exame = await PedidosExame.findAll({
+    //   order: [
+    //     ['data_prev'],
+    //   ]
     // });
-    // if (!!medico) {
-    const pedidos_exame = await PedidosExame.findAll();
 
-    return res.json(pedidos_exame);
-    // }
-    // return res.status(401).json("Usuario não é um médico");;
+    // return res.json(pedidos_exame);
+    // // }
+    // // return res.status(401).json("Usuario não é um médico");;
 
   },
 
