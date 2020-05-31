@@ -11,7 +11,7 @@ class usuario extends Model {
         nome: DataTypes.STRING,
         email: DataTypes.STRING,
         tipo_usuario: DataTypes.CHAR,
-        data_nasc: DataTypes.DATE,
+        data_nasc: DataTypes.DATEONLY,
         // password: DataTypes.VIRTUAL,
         password_hash: DataTypes.STRING,
         sexo: DataTypes.CHAR,

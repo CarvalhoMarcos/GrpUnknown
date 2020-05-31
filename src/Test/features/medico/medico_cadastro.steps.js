@@ -4,9 +4,9 @@ const moment = require("moment");
 //const response = require('express');
 
 const request = require('supertest');
-const app = require('../../app');
+const app = require('../../../app');
 
-const feature = define.loadFeature("src/Test/features/medico_cadastro.feature");
+const feature = define.loadFeature("src/Test/features/medico/medico_cadastro.feature");
 var faker = require('faker');
 
 
@@ -67,8 +67,6 @@ define.defineFeature(feature, test => {
                 .send(
                     objMedico
                 ).set('Accept', 'application/json');
-            console.log(response.body);
-
         });
         then('iremos ver a resposta:', (docString) => {
             expect(response.status).toEqual(200);
