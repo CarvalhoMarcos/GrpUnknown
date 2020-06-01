@@ -38,28 +38,27 @@ define.defineFeature(feature, test => {
             let data = day + '/' + month + '/' + year;
 
             objMedico['data_nasc'] = data;
-            console.log(objMedico['data_nasc']);
         });
 
-        // and(/^sexo é (.*)$/, (sexo) => {
-        // objMedico['sexo'] = sexo;
-        // });
+        and(/^sexo é (.*)$/, (sexo) => {
+        objMedico['sexo'] = sexo;
+        });
 
-        // and(/^cor é (.*)$/, (cor) => {
-        // objMedico['cor'] = cor;
-        // });
+        and(/^cor é (.*)$/, (cor) => {
+        objMedico['cor'] = cor;
+        });
 
-        // and(/^crm é (.*)$/, (crm) => {
-        // objMedico['crm'] = crm;
-        // });
+        and(/^crm é (.*)$/, (crm) => {
+        objMedico['crm'] = crm;
+        });
 
-        // and(/^eh_docente é (.*)$/, (eh_docente) => {
-        // objMedico['eh_docente'] = eh_docente;
-        // });
+        and(/^eh_docente é (.*)$/, (eh_docente) => {
+        objMedico['eh_docente'] = eh_docente;
+        });
 
-        // and(/^titulo_uni é (.*)$/, (titulo_uni) => {
-        // objMedico['titulo_uni'] = titulo_uni;
-        // });
+        and(/^titulo_uni é (.*)$/, (titulo_uni) => {
+        objMedico['titulo_uni'] = titulo_uni;
+        });
 
         when('o formulário for submetido para o cadastro', async () => {
             response = await request(app)
@@ -67,9 +66,11 @@ define.defineFeature(feature, test => {
                 .send(
                     objMedico
                 ).set('Accept', 'application/json');
+
         });
         then('iremos ver a resposta:', (docString) => {
             expect(response.status).toEqual(200);
+            expect(response.body).toEqual("result: 'Cadastro do medico concluido'");
         });
     });
 });

@@ -12,7 +12,6 @@ define.defineFeature(feature, test => {
 
         given(/^dado um cpf sendo (.*)$/, (cpf) => {
             CPF = cpf;
-            console.log(CPF);
             
         });
 
