@@ -10,6 +10,7 @@ const ResidenteController = require("./controller/ResidenteController");
 const ensureAuthenticated = require("./middlewares/ensureAuthenticated");
 const TipoExameController = require("./controller/TipoExameController");
 const PedidoExameController = require("./controller/PedidoExameController");
+const RegistroExameController = require("./controller/RegistroExameController")
 
 // routes.post("/", TestController.index);
 routes.get("/usuario/:id?", UserController.index);
@@ -31,6 +32,11 @@ routes.post("/tipo_exame", TipoExameController.store);
 
 routes.get("/pedidosExame/:id?", PedidoExameController.index);
 routes.post("/pedidosExame", ensureAuthenticated, PedidoExameController.store);
+
+routes.get("/registrosExame/:id?", RegistroExameController.index);
+routes.post("/registrosExame", ensureAuthenticated, RegistroExameController.store);
+routes.delete("/registrosExame/:id?", RegistroExameController.destroy)
+
 routes.post("/login", SessionController.login);
 
 module.exports = routes;

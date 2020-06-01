@@ -6,6 +6,7 @@ const Residente = require("../models/Residente");
 const TipoExame = require("../models/TipoExame");
 const ArquivoPdf = require("../models/ArquivoPdf");
 const PedidosExame = require("../models/PedidosExame");
+const RegistroExame = require("../models/RegistroExame")
 const connection = new Sequelize(dbConfig);
 
 
@@ -15,12 +16,14 @@ Residente.init(connection);
 TipoExame.init(connection);
 ArquivoPdf.init(connection);
 PedidosExame.init(connection);
+RegistroExame.init(connection)
 Usuario.associate(connection.models);
 Medico.associate(connection.models);
 Residente.associate(connection.models);
 TipoExame.associate(connection.models);
 ArquivoPdf.associate(connection.models);
 PedidosExame.associate(connection.models);
+RegistroExame.associate(connection.models);
 
 
 module.exports = connection;
