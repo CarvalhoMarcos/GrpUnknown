@@ -22,6 +22,8 @@ import { PacienteComponent } from './paciente/paciente.component';
 import { CadastroPaciComponent } from './paciente/cadastro-paci/cadastro-paci.component';
 import { DeletarPaciComponent } from './paciente/deletar-paci/deletar-paci.component';
 
+import { PedidoExameComponent } from './pedido-exame/pedido-exame.component';
+
 
 
 
@@ -55,6 +57,7 @@ const routes: Routes = [
       { path: 'del-aluno', component: DeletarAlunoComponent },
     ]
   },
+  { path: 'teste', component: PedidoExameComponent },
 ];
 
 @NgModule({

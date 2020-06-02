@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AdmPageComponent } from './adm-page/adm-page.component';
@@ -40,6 +39,7 @@ import { PedidoExameComponent } from './pedido-exame/pedido-exame.component';
 import { ConsultarPedidoExameComponent } from './pedido-exame/consultar-pedido-exame/consultar-pedido-exame.component';
 import { LaudoMedicoComponent } from './laudo-medico/laudo-medico.component';
 import { ConsultarLaudoMedicoComponent } from './laudo-medico/consultar-laudo-medico/consultar-laudo-medico.component';
+import { ValidarLaudoMedicoComponent } from './laudo-medico/validar-laudo-medico/validar-laudo-medico.component';
 
 
 
@@ -62,7 +62,8 @@ import { ConsultarLaudoMedicoComponent } from './laudo-medico/consultar-laudo-me
     PedidoExameComponent,
     ConsultarPedidoExameComponent,
     LaudoMedicoComponent,
-    ConsultarLaudoMedicoComponent
+    ConsultarLaudoMedicoComponent,
+    ValidarLaudoMedicoComponent
 
   ],
   imports: [

@@ -12,4 +12,5 @@ export class LaudoMedicoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  emitirLaudo() {}
 }
