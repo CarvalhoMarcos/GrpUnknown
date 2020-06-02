@@ -41,6 +41,7 @@ import { ConsultarLaudoMedicoComponent } from "./laudo-medico/consultar-laudo-me
 
 import { MedPageComponent } from "./med-page/med-page.component";
 import { AlunoPageComponent } from './aluno-page/aluno-page.component';
+import { RegistrarExameComponent } from './registrar-exame/registrar-exame.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { AlunoPageComponent } from './aluno-page/aluno-page.component';
     ConsultarLaudoMedicoComponent,
 
     MedPageComponent,
-    AlunoPageComponent
+    AlunoPageComponent,
+    RegistrarExameComponent
   ],
   imports: [
     BrowserModule,
