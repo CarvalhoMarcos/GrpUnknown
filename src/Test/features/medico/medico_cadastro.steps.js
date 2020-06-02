@@ -34,7 +34,7 @@ define.defineFeature(feature, test => {
             objMedico['password'] = password;
         });
 
-        and(/^data_nasc sendo (.*)\/(.*)\/(.*)$/, (day, month, year) => {
+        and(/^data_nasc (.*)\/(.*)\/(.*)$/, (day, month, year) => {
             let data = day + '/' + month + '/' + year;
 
             objMedico['data_nasc'] = data;

@@ -38,8 +38,14 @@ define.defineFeature(feature, test => {
             objUser['cor'] = cor;
         });
 
+        and(/^data_nasc sendo (.*)\/(.*)\/(.*)$/, (day, month, year) => {
+            let data = day + '/' + month + '/' + year;
+
+            objUser['data_nasc'] = data;
+        });
+
         when('preenchido o form corretamente e feita a request', async () => {
-            reponse = await request(app)
+            response = await request(app)
                 .post("/usuario")
                 .send(objUser)
                 .set('Accept', 'application/json');
@@ -47,7 +53,6 @@ define.defineFeature(feature, test => {
 
         then('a response é', (docString) => {
             expect(response.status).toEqual(200);
-            expect(response.body).toEqual("result: 'Cadastro do medico concluido'");
         });
     });
 });
