@@ -21,7 +21,8 @@ import { PacienteComponent } from "./paciente/paciente.component";
 import { CadastroPaciComponent } from "./paciente/cadastro-paci/cadastro-paci.component";
 import { DeletarPaciComponent } from "./paciente/deletar-paci/deletar-paci.component";
 
-import { LaudoMedicoComponent } from "./laudo-medico/laudo-medico.component";
+import { MedPageComponent } from "./med-page/med-page.component";
+import { AlunoPageComponent } from './aluno-page/aluno-page.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -60,7 +61,9 @@ const routes: Routes = [
       { path: "del-aluno", component: DeletarAlunoComponent },
     ],
   },
-  { path: "laudo-medico", component: LaudoMedicoComponent },
+
+  { path: "med", component: MedPageComponent },
+  { path: "aluno", component: AlunoPageComponent },
 ];
 
 @NgModule({
