@@ -1,17 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-consultar-laudo-medico',
-  templateUrl: './consultar-laudo-medico.component.html',
-  styleUrls: ['./consultar-laudo-medico.component.css']
+  selector: "app-consultar-laudo-medico",
+  templateUrl: "./consultar-laudo-medico.component.html",
+  styleUrls: ["./consultar-laudo-medico.component.css"],
 })
 export class ConsultarLaudoMedicoComponent implements OnInit {
+  // request: RequestLaudoMedico = {
+  //   laudo_id: "",
+  // };
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   consultar() {}
-
 }

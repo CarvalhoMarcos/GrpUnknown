@@ -1,14 +1,24 @@
 <div class="container col-md-6">
-    <form>
+  <form>
+    <div class="form-group">
+      <input
+        class="form-control"
+        name="laudo_id"
+        placeholder="Número do laudo"
+        type="text"
+      />
+      <!-- [(ngModel)]="request.laudo_id" -->
+    </div>
 
-        <div class="form-group ">
-            <input class="form-control" name="idLaudoMedico" placeholder="Numero do Laudo" type="text" />
-        </div>
-        
-
-        <div class="container">
-            <button class="mat-raised-button" style="margin: 15px" type="submit" (click)="consultar()">Consultar</button>
-        </div>
-    </form>
-
+    <div class="container">
+      <button
+        class="mat-raised-button"
+        style="margin: 15px;"
+        type="submit"
+        (click)="consultar()"
+      >
+        Consultar
+      </button>
+    </div>
+  </form>
 </div>
