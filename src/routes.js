@@ -10,7 +10,9 @@ const ResidenteController = require("./controller/ResidenteController");
 const ensureAuthenticated = require("./middlewares/ensureAuthenticated");
 const TipoExameController = require("./controller/TipoExameController");
 const PedidoExameController = require("./controller/PedidoExameController");
-const RegistroExameController = require("./controller/RegistroExameController")
+const RegistroExameController = require("./controller/RegistroExameController");
+const LaudoMedicoController = require("./controller/LaudoMedicoController");
+const ValidacaoController = require("./controller/ValidacaoController");
 
 // routes.post("/", TestController.index);
 routes.get("/usuario/:id?", UserController.index);
@@ -35,7 +37,16 @@ routes.post("/pedidosExame", ensureAuthenticated, PedidoExameController.store);
 
 routes.get("/registrosExame/:id?", RegistroExameController.index);
 routes.post("/registrosExame", ensureAuthenticated, RegistroExameController.store);
-routes.delete("/registrosExame/:id?", RegistroExameController.destroy)
+routes.delete("/registrosExame/:id?", RegistroExameController.destroy);
+routes.get("/registrosPendentes", RegistroExameController.registrosPendentes);
+
+routes.get("/laudosMedicos", LaudoMedicoController.index);
+routes.post("/laudosMedicos", ensureAuthenticated, LaudoMedicoController.store);
+routes.delete("/laudosMedicos/:id?", LaudoMedicoController.destroy);
+
+routes.get("/validacoes", ValidacaoController.index);
+routes.post("/validacoes", ensureAuthenticated, ValidacaoController.store);
+
 
 routes.post("/login", SessionController.login);
 

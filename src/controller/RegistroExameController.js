@@ -1,7 +1,7 @@
 const RegistroExame = require("../models/RegistroExame");
 const Residente = require("../models/Residente");
 const { v4: uuidv4 } = require('uuid');
-
+const database = require("../database/index");
 // const Sequelize = require("sequelize");
 module.exports = {
   async index(req, res) {
@@ -45,6 +45,18 @@ module.exports = {
     // // return res.status(401).json("Usuario não é um médico");;
 
   },
+  async registrosPendentes(req, res) {
+    const [
+      results,
+      metadata,
+    ] = await database.query(`SELECT ID, PEDIDO_ID, EXAMINADOR_ID, DATA_HORA_EXAME
+    REGISTROS_EXAMES LEFT JOIN LAUDOS_MEDICOS
+    WHERE LAUDOS_MEDICOS.ID_LAUDO = NULL`);
+
+    return res.status(200).json(results);
+
+  },
+
 
   async store(req, res) {
     const id = req.id;

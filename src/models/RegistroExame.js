@@ -28,6 +28,10 @@ class registro_exame extends Model {
       foreignKey: "pdf_id",
       as: "pdf",
     });
+    this.hasMany(models.laudos_medicos, {
+      foreignKey: "exame_id",
+      as: "laudo",
+    });
   }
 }
 module.exports = registro_exame;
