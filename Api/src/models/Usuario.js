@@ -5,7 +5,7 @@ class usuario extends Model {
     super.init(
       {
         cpf: {
-          type: DataTypes.INTEGER,
+          type: DataTypes.STRING,
           primaryKey: true,
         },
         nome: DataTypes.STRING,
@@ -23,6 +23,10 @@ class usuario extends Model {
     );
   }
   static associate(models) {
+    this.hasMany(models.pedidos_exames, {
+      foreignKey: "paciente_id",
+      as: "usuarios",
+    });
     this.belongsTo(models.medico, {
       foreignKey: "cpf",
       as: "informacoes",
