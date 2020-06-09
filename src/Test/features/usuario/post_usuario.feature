@@ -3,7 +3,7 @@ Feature: Cadastrar um usuario
     Cadastrar um determinado usuario
 
     Scenario: Cadastrar um usuário
-        Given dado um cpf 729415878
+        Given dado um cpf 789415878
         And nome Luis Henrique Machado
         And email luis.fontes@souunit.com.br
         And tipo_usuario P
