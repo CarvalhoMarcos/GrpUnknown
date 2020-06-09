@@ -22,19 +22,23 @@
     "uuid": "^8.1.0"
   },
   "devDependencies": {
+<<<<<<< HEAD
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
     "cucumber": "^6.0.5",
     "jest": "^26.0.1",
     "jest-cucumber": "^2.0.11",
+=======
+    "cucumber": "^6.0.5",
+>>>>>>> sequelize
     "nodemon": "^2.0.2",
     "sequelize-cli": "^5.5.1",
     "supertest": "^4.0.2",
     "zombie": "^6.1.4"
   },
   "scripts": {
+<<<<<<< HEAD
     "start": "node src/server.js",
-    "cucumber": "cucumber.js ./myFeatures -r ./mySteps",
     "dev": "nodemon src/app.js",
     "test": "jest"
   },
@@ -48,5 +52,10 @@
      
       "**/*.steps.js"
     ]
+=======
+    "cucumber": "cucumber.js ./myFeatures -r ./mySteps",
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+>>>>>>> sequelize
   }
 }

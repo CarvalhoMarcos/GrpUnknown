@@ -18,7 +18,8 @@ module.exports = function ensureAuthenticated(req, res, next) {
     const { sub } = decoded;
 
     req.id = sub;
-    
+
+
     return next();
   } catch (err) {
     return res.status(401).json("Invalid JWT Token");
