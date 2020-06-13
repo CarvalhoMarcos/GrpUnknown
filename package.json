@@ -42,10 +42,8 @@
     "testEnvironment": "node",
     "coveragePathIgnorePatterns": [
       "/node_modules/"
-    ]
-    ,
+    ],
     "testMatch": [
-     
       "**/*.steps.js"
     ]
   }
