@@ -39,7 +39,8 @@ import { PedidoExameComponent } from './pedido-exame/pedido-exame.component';
 import { ConsultarPedidoExameComponent } from './pedido-exame/consultar-pedido-exame/consultar-pedido-exame.component';
 import { LaudoMedicoComponent } from './laudo-medico/laudo-medico.component';
 import { ConsultarLaudoMedicoComponent } from './laudo-medico/consultar-laudo-medico/consultar-laudo-medico.component';
-import { ValidarLaudoMedicoComponent } from './laudo-medico/validar-laudo-medico/validar-laudo-medico.component';
+//import { ValidarLaudoMedicoComponent } from './laudo-medico/validar-laudo-medico/validar-laudo-medico.component';
+import { AutenticacaoService } from './login/autenticacao.service';
 
 
 
@@ -63,7 +64,7 @@ import { ValidarLaudoMedicoComponent } from './laudo-medico/validar-laudo-medico
     ConsultarPedidoExameComponent,
     LaudoMedicoComponent,
     ConsultarLaudoMedicoComponent,
-    ValidarLaudoMedicoComponent
+    //ValidarLaudoMedicoComponent
 
   ],
   imports: [
@@ -87,7 +88,7 @@ import { ValidarLaudoMedicoComponent } from './laudo-medico/validar-laudo-medico
     AlunoRoutingModule
 
   ],
-  providers: [],
+  providers: [AutenticacaoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
