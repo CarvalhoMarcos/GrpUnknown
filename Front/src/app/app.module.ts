@@ -41,6 +41,7 @@ import { LaudoMedicoComponent } from './laudo-medico/laudo-medico.component';
 import { ConsultarLaudoMedicoComponent } from './laudo-medico/consultar-laudo-medico/consultar-laudo-medico.component';
 //import { ValidarLaudoMedicoComponent } from './laudo-medico/validar-laudo-medico/validar-laudo-medico.component';
 import { AutenticacaoService } from './login/autenticacao.service';
+import { CadastroPedidoExameComponent } from './pedido-exame/cadastro-pedido-exame/cadastro-pedido-exame.component';
 
 
 
@@ -64,6 +65,7 @@ import { AutenticacaoService } from './login/autenticacao.service';
     ConsultarPedidoExameComponent,
     LaudoMedicoComponent,
     ConsultarLaudoMedicoComponent,
+    CadastroPedidoExameComponent,
     //ValidarLaudoMedicoComponent
 
   ],

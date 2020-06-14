@@ -1,0 +1,36 @@
+<div class="container col-md-6" style="margin-top: 15px;">
+
+    <form>
+
+        <div class="form-group ">
+            <input class="form-control" name="cpfDoPaciente" placeholder="CPF" type="text" [(ngModel)]="request.paciente_id" />
+        </div>
+
+        <div class="form-group ">
+            <select class="custom-select" [(ngModel)]="request.tipo_exame_id">
+                <option value="" disabled>Tipo de Exame</option>
+                <option>Ecocardiograma</option>
+                <option>Eletrocardiograma</option>
+                <option>Mapa</option>
+                <option>Holter</option>
+             </select>
+        </div>
+
+        <div class="form-group" >
+            <input class="form-control" name="cid" placeholder="CID" type="text" [(ngModel)]="request.cid" />
+        </div>
+
+        <div class="form-group" >
+            <input class="form-control" name="dataRealizacao" placeholder="Data de Realização" type="date" [(ngModel)]="request.data_prev" />
+        </div>
+
+        <div class="form-group" >
+            <input class="form-control" name="descDiagnostico" placeholder="Diagnostico" type="text" [(ngModel)]="request.desc_diagn" />
+        </div>
+
+        <div class="container">
+            <button class="mat-raised-button" style="margin: 15px" type="submit" (click)="salvar()">Salvar</button>
+        </div>
+    </form>
+
+</div>

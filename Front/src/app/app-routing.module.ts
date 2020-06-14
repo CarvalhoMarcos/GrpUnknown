@@ -23,6 +23,9 @@ import { CadastroPaciComponent } from './paciente/cadastro-paci/cadastro-paci.co
 import { DeletarPaciComponent } from './paciente/deletar-paci/deletar-paci.component';
 
 import { PedidoExameComponent } from './pedido-exame/pedido-exame.component';
+import { CadastroPedidoExameComponent } from './pedido-exame/cadastro-pedido-exame/cadastro-pedido-exame.component';
+import { ConsultarPedidoExameComponent } from './pedido-exame/consultar-pedido-exame/consultar-pedido-exame.component';
+
 
 
 
@@ -57,7 +60,12 @@ const routes: Routes = [
       { path: 'del-aluno', component: DeletarAlunoComponent },
     ]
   },
-  { path: 'teste', component: PedidoExameComponent },
+  { path: 'pedido', component: PedidoExameComponent,
+    children: [
+      { path: 'cad-pedido-exame', component: CadastroPedidoExameComponent  },
+      { path: 'col-pedico-exame', component: ConsultarPedidoExameComponent },
+    ] 
+  },
 ];
 
 @NgModule({
