@@ -21,6 +21,7 @@ export class PedidoExameService {
   }
   
   cadastrarPedidoExame(request: RequestCreatePedidoExame): Observable<ResponseCreatePedidoExame> {
+    console.log(localStorage.getItem("token"));
     return this.http.post<ResponseCreatePedidoExame>(this.url, request);
   }
 }

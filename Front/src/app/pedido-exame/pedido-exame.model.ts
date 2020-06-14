@@ -22,3 +22,9 @@ export interface ResponsePedidosExame{
 export interface ResponseCreatePedidoExame{
     result: string;
 }
+
+export interface TipoExame{
+    id : string;
+    nome_exame: string;
+    recomendacoes;
+}
