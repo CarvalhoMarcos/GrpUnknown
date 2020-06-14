@@ -26,6 +26,7 @@
     "bootstrap": "^4.4.1",
     "form": "^0.2.4",
     "http": "0.0.1-security",
+    "ng2-pdf-viewer": "^6.3.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

@@ -43,6 +43,8 @@ import { MedPageComponent } from "./med-page/med-page.component";
 import { AlunoPageComponent } from './aluno-page/aluno-page.component';
 import { RegistrarExameComponent } from './registrar-exame/registrar-exame.component';
 
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -83,6 +85,7 @@ import { RegistrarExameComponent } from './registrar-exame/registrar-exame.compo
     FormsModule,
     AlunoModule,
     AlunoRoutingModule,
+    PdfViewerModule
   ],
   providers: [],
   bootstrap: [AppComponent],
