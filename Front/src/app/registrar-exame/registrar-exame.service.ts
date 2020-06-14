@@ -20,7 +20,7 @@ export class RegistrarExameService {
     return this.http.get<any>(this.url);
   }
 
-  finalizarRegistro(
+  cadastrarRegistro(
     request: RequestRegistrarExame
   ): Observable<RequestRegistrarExame> {
     return this.http.post<RequestRegistrarExame>(this.url, request);

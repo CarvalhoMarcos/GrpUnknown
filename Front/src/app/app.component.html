@@ -1,10 +1,12 @@
-<!-- <app-sidenav *ngIf="exibeNavBar()" 
+<app-sidenav *ngIf="exibeNavBar()" 
 [title]="title" 
-[titulos]="['Médicos','Professores','Alunos','Paciente']"
-[links]="['adm/med','adm/prof', 'adm/aluno', 'adm/paci']"></app-sidenav>
-<router-outlet></router-outlet> -->
+[titulos]="['Médicos','Professores','Alunos','Paciente','Pedido Exame']"
+[links]="['adm/med','adm/prof', 'adm/aluno', 'adm/paci','pedido']"></app-sidenav>
+<router-outlet></router-outlet>
 
-<app-registrar-exame></app-registrar-exame>
+<!-- <app-registrar-exame></app-registrar-exame> -->
+<!-- <app-aluno></app-aluno> -->
+
 
 <!-- <app-consultar-laudo-medico></app-consultar-laudo-medico>
 

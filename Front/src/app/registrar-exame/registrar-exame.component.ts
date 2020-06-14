@@ -55,20 +55,11 @@ export class RegistrarExameComponent implements OnInit {
 
   finalizarRegistro() {
     this.registrarExameService
-      .finalizarRegistro(this.requestRegistrarExame)
+      .cadastrarRegistro(this.requestRegistrarExame)
       .subscribe((res) => {
         this.responseRegistrarExame = res;
       });
   }
-
-  // request: RequestRegistroExame = {
-  //   exame_id: "",
-  //   pedido_id: "",
-  //   examinador_id: "",
-  //   data_hora_id: "", //mudar para datetime
-  //   pdf_id: "",
-  // };
-  // response: ResponseRegistroExame;
 
   // constructor() {}
 
