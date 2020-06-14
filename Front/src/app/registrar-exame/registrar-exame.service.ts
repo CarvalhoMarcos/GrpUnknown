@@ -15,7 +15,14 @@ export class RegistrarExameService {
   // constructor() {}
   constructor(private http: HttpClient) {}
 
+  // pegar pedidos de exame em aberto
   getAllRegistrarExame(): Observable<any> {
     return this.http.get<any>(this.url);
+  }
+
+  finalizarRegistro(
+    request: RequestRegistrarExame
+  ): Observable<RequestRegistrarExame> {
+    return this.http.post<RequestRegistrarExame>(this.url, request);
   }
 }

@@ -19,6 +19,7 @@ export class RegistrarExameComponent implements OnInit {
 
   //requests/responses
   responseRegistrarExame: RegistrarExame;
+
   requestRegistrarExame: RequestRegistrarExame;
 
   registrarExame: Object[];
@@ -52,6 +53,14 @@ export class RegistrarExameComponent implements OnInit {
     });
   }
 
+  finalizarRegistro() {
+    this.registrarExameService
+      .finalizarRegistro(this.requestRegistrarExame)
+      .subscribe((res) => {
+        this.responseRegistrarExame = res;
+      });
+  }
+
   // request: RequestRegistroExame = {
   //   exame_id: "",
   //   pedido_id: "",
@@ -64,6 +73,4 @@ export class RegistrarExameComponent implements OnInit {
   // constructor() {}
 
   // ngOnInit(): void {}
-
-  finalizarRegistro() {}
 }

@@ -40,10 +40,10 @@ import { LaudoMedicoComponent } from "./laudo-medico/laudo-medico.component";
 import { ConsultarLaudoMedicoComponent } from "./laudo-medico/consultar-laudo-medico/consultar-laudo-medico.component";
 
 import { MedPageComponent } from "./med-page/med-page.component";
-import { AlunoPageComponent } from './aluno-page/aluno-page.component';
-import { RegistrarExameComponent } from './registrar-exame/registrar-exame.component';
+import { AlunoPageComponent } from "./aluno-page/aluno-page.component";
+import { RegistrarExameComponent } from "./registrar-exame/registrar-exame.component";
 
-import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { PdfViewerModule } from "ng2-pdf-viewer";
 
 @NgModule({
   declarations: [
@@ -61,10 +61,9 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
     ConsultarPedidoExameComponent,
     LaudoMedicoComponent,
     ConsultarLaudoMedicoComponent,
-
     MedPageComponent,
     AlunoPageComponent,
-    RegistrarExameComponent
+    RegistrarExameComponent,
   ],
   imports: [
     BrowserModule,
@@ -85,7 +84,7 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
     FormsModule,
     AlunoModule,
     AlunoRoutingModule,
-    PdfViewerModule
+    PdfViewerModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
