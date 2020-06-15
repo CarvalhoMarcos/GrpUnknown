@@ -43,6 +43,10 @@ import { ConsultarLaudoMedicoComponent } from './laudo-medico/consultar-laudo-me
 import { AutenticacaoService } from './login/autenticacao.service';
 import { CadastroPedidoExameComponent } from './pedido-exame/cadastro-pedido-exame/cadastro-pedido-exame.component';
 
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+
 
 
 
@@ -87,7 +91,10 @@ import { CadastroPedidoExameComponent } from './pedido-exame/cadastro-pedido-exa
     HttpClientModule,
     FormsModule,
     AlunoModule,
-    AlunoRoutingModule
+    AlunoRoutingModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    MatInputModule,
 
   ],
   providers: [AutenticacaoService],

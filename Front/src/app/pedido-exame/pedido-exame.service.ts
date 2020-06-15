@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders  } from '@angular/common/http';
 import { PedidoExame, RequestCreatePedidoExame, ResponseCreatePedidoExame } from './pedido-exame.model';
 import { Observable } from 'rxjs';
 
@@ -21,7 +21,7 @@ export class PedidoExameService {
   }
   
   cadastrarPedidoExame(request: RequestCreatePedidoExame): Observable<ResponseCreatePedidoExame> {
-    console.log(localStorage.getItem("token"));
-    return this.http.post<ResponseCreatePedidoExame>(this.url, request);
+    let headers = new HttpHeaders().set('Content-Type', 'application/json').set('Authorization', 'Bearer ' + localStorage.getItem("token"));
+    return this.http.post<ResponseCreatePedidoExame>(this.url, request, {headers: headers});
   }
 }
