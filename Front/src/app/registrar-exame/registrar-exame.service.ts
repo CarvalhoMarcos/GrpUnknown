@@ -1,11 +1,12 @@
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import {
-  RequestRegistrarExame,
-  ResponseRegistrarExame,
-  RegistrarExame,
+  RegistroExame,
+  ResponseRegistroExame,
+  RequestCreateRegistroExame,
+  ResponseCreateRegistroExame,
 } from "./registrar-exame.model";
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 @Injectable({
   providedIn: "root",
 })
@@ -16,13 +17,25 @@ export class RegistrarExameService {
   constructor(private http: HttpClient) {}
 
   // pegar pedidos de exame em aberto
-  getAllRegistrarExame(): Observable<any> {
-    return this.http.get<any>(this.url);
+  getRegistroExame(pedido_id: string): Observable<RegistroExame> {
+    //get pedido exame pra pegar o cpf
+    return this.http.get<RegistroExame>(this.url + "/" + pedido_id);
   }
 
-  cadastrarRegistro(
-    request: RequestRegistrarExame
-  ): Observable<RequestRegistrarExame> {
-    return this.http.post<RequestRegistrarExame>(this.url, request);
+  //o post do pedido alterar para E
+
+  getAllRegistrosExame(): Observable<any> {
+    return this.http.get<any>(this.url); //se der problema ta faltando subscribe
+  }
+
+  cadastrarRegistroExame(
+    request: RequestCreateRegistroExame
+  ): Observable<ResponseCreateRegistroExame> {
+    let headers = new HttpHeaders()
+      .set("Content-Type", "application/json")
+      .set("Authorization", "Bearer " + localStorage.getItem("token"));
+    return this.http.post<ResponseCreateRegistroExame>(this.url, request, {
+      headers: headers,
+    });
   }
 }

@@ -1,5 +1,10 @@
 import { Component, OnInit } from "@angular/core";
-import { RequestRegistrarExame, RegistrarExame } from "./registrar-exame.model";
+import {
+  RegistroExame,
+  ResponseRegistroExame,
+  RequestCreateRegistroExame,
+  ResponseCreateRegistroExame,
+} from "./registrar-exame.model";
 import { RegistrarExameService } from "./registrar-exame.service";
 
 @Component({
@@ -9,6 +14,7 @@ import { RegistrarExameService } from "./registrar-exame.service";
 })
 export class RegistrarExameComponent implements OnInit {
   // lista de seleção
+  // registros: Object[]; lista do tipo aberto fazer o if pra achar esses
   typesOfShoes: string[] = [
     "Boots",
     "Clogs",
@@ -18,14 +24,22 @@ export class RegistrarExameComponent implements OnInit {
   ];
 
   //requests/responses
-  responseRegistrarExame: RegistrarExame;
+  responseRegistro: RegistroExame;
+  // responseRegistro: Object; //object ou any
 
-  requestRegistrarExame: RequestRegistrarExame = {
+  responseRegistros: ResponseRegistroExame;
+
+  requestCreate: RequestCreateRegistroExame = {
     data_hora_exame: new Date().toISOString(),
     pedido_id: "",
+    // status: "E", // mudar pra E??
   };
 
-  registrarExame: Object[];
+  responseCreate: ResponseCreateRegistroExame;
+
+  pedido_id: "";
+
+  registros: Object[];
 
   // upload e render do PDF
   pdfSrc = "";
@@ -47,25 +61,28 @@ export class RegistrarExameComponent implements OnInit {
   constructor(private registrarExameService: RegistrarExameService) {}
 
   ngOnInit(): void {
-    this.getTodosPedidos();
+    this.getTodosRegistros();
   }
 
-  getTodosPedidos() {
-    this.registrarExameService.getAllRegistrarExame().subscribe((res) => {
-      this.registrarExame = res;
+  getRegistroPedidoId() {
+    this.registrarExameService
+      .getRegistroExame(this.pedido_id)
+      .subscribe((res) => {
+        this.responseRegistro = res;
+      });
+  }
+  getTodosRegistros() {
+    this.registrarExameService.getAllRegistrosExame().subscribe((res) => {
+      this.registros = res;
     });
   }
 
   finalizarRegistro() {
-    console.log(this.requestRegistrarExame);
+    this.registrarExameService
+      .cadastrarRegistroExame(this.requestCreate)
+      .subscribe((res) => {
+        this.responseCreate = res;
+      });
+    // console.log(this.request);
   }
-  // this.registrarExameService
-  //   .cadastrarRegistro(this.requestRegistrarExame)
-  //   .subscribe((res) => {
-  //     this.responseRegistrarExame = res;
-  //   });
-
-  // constructor() {}
-
-  // ngOnInit(): void {}
 }
