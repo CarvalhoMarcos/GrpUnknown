@@ -20,7 +20,10 @@ export class RegistrarExameComponent implements OnInit {
   //requests/responses
   responseRegistrarExame: RegistrarExame;
 
-  requestRegistrarExame: RequestRegistrarExame;
+  requestRegistrarExame: RequestRegistrarExame = {
+    data_hora_exame: new Date().toISOString(),
+    pedido_id: "",
+  };
 
   registrarExame: Object[];
 
@@ -54,12 +57,13 @@ export class RegistrarExameComponent implements OnInit {
   }
 
   finalizarRegistro() {
-    this.registrarExameService
-      .cadastrarRegistro(this.requestRegistrarExame)
-      .subscribe((res) => {
-        this.responseRegistrarExame = res;
-      });
+    console.log(this.requestRegistrarExame);
   }
+  // this.registrarExameService
+  //   .cadastrarRegistro(this.requestRegistrarExame)
+  //   .subscribe((res) => {
+  //     this.responseRegistrarExame = res;
+  //   });
 
   // constructor() {}
 

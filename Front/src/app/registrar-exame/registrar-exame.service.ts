@@ -10,7 +10,7 @@ import { HttpClient } from "@angular/common/http";
   providedIn: "root",
 })
 export class RegistrarExameService {
-  private url = "http://localhost:4003/residente/";
+  private url = "http://localhost:4003/registrosExame";
 
   // constructor() {}
   constructor(private http: HttpClient) {}

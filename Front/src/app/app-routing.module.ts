@@ -22,7 +22,8 @@ import { CadastroPaciComponent } from "./paciente/cadastro-paci/cadastro-paci.co
 import { DeletarPaciComponent } from "./paciente/deletar-paci/deletar-paci.component";
 
 import { MedPageComponent } from "./med-page/med-page.component";
-import { AlunoPageComponent } from './aluno-page/aluno-page.component';
+import { AlunoPageComponent } from "./aluno-page/aluno-page.component";
+import { RegistrarExameComponent } from "./registrar-exame/registrar-exame.component";
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -64,6 +65,8 @@ const routes: Routes = [
 
   { path: "med", component: MedPageComponent },
   { path: "aluno", component: AlunoPageComponent },
+
+  { path: "registro", component: RegistrarExameComponent },
 ];
 
 @NgModule({
