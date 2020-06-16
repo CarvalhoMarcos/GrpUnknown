@@ -1,0 +1,20 @@
+<div class="container">
+  <mat-selection-list [multiple]="false">
+    <!-- Esse NG-Container faz com que possa separa as diretivas do angular-->
+    <ng-container *ngFor="let medico of medicos">
+      <mat-list-option *ngIf="medico.eh_docente=== false">
+        {{medico.crm}} - {{medico.nome}}
+      </mat-list-option>
+    </ng-container>
+  </mat-selection-list>
+</div>
+
+<div class="container col-md-6">
+  <div class="container">
+    <button class="mat-raised-button" style="margin: 15px" [routerLink]="'cad-med'" routerLinkActive="active">Cadastrar</button>
+    <button class="mat-raised-button" style="margin: 15px" [routerLink]="'del-med'" routerLinkActive="active">Deletar </button>
+  </div>
+
+</div>
+
+<router-outlet></router-outlet>

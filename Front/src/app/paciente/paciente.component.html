@@ -1,0 +1,23 @@
+<p>paciente works!</p>
+<div class="container">
+  <mat-selection-list [multiple]="false">
+    <!-- Esse NG-Container faz com que possa separa as diretivas do angular
+    ja ue n pode usar o if e for no mesmo componente 
+    estou separando os que sao pacientes e os que não são antes de
+    exibir na lista-->
+    <ng-container *ngFor="let paciente of pacientes">
+      <mat-list-option *ngIf=" paciente.tipo_usuario === 'P' ">
+        {{paciente.crm}} - {{paciente.nome}}
+      </mat-list-option>
+    </ng-container>
+  </mat-selection-list>
+</div>
+
+<div class="container col-md-6">
+    <div class="container">
+      <button class="button" style="margin: 15px" [routerLink]="'cad-paci'" routerLinkActive="active">Cadastrar</button>
+      <button class="button" style="margin: 15px" [routerLink]="'del-paci'" routerLinkActive="active">Deletar </button>
+    </div>
+</div>
+  
+<router-outlet></router-outlet>

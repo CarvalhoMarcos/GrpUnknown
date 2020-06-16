@@ -1,0 +1,25 @@
+<div class="container col-md-6" style="margin-top: 15px;">
+
+    <form>
+
+        <div class="form-group ">
+            <select class="custom-select">
+                <option value="" disabled>Registro de exame</option>
+                <option>Teste</option>
+             </select>
+        </div>
+
+        <div class="form-group ">
+            <input class="form-control" name="descricaoExame" placeholder="Descrição do Exame" type="text" />
+        </div>
+
+        <div class="form-group ">
+            <input class="form-control" name="cid" placeholder="CID" type="text" />
+        </div>
+
+        <div class="container">
+            <button class="mat-raised-button" style="margin: 15px" type="submit" (click)="emitirLaudo()">Emitir laudo</button>
+        </div>
+    </form>
+
+</div>

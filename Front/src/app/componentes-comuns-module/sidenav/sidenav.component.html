@@ -1,0 +1,20 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="sidenav.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span class="title">{{ title }}</span>
+  <a mat-button href="#"> Sair </a>
+</mat-toolbar>
+
+<mat-sidenav-container class="sidenav-container" >
+  <mat-sidenav class="sidenav" mode="side" [(opened)]="opened">
+    <mat-nav-list>
+      <mat-list-item *ngFor="let link of links, let i = index">
+        <a style="color: white;" routerLink="{{link}}"> {{titulos[i]}}</a>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

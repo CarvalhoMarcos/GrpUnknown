@@ -1,0 +1,43 @@
+<div class="container col-md-6">
+  <form>
+    <!-- Selecionar pedido-->
+    <!-- <mat-selection-list #shoes [multiple]="false">
+      <mat-list-option *ngFor="let shoe of typesOfShoes">
+        {{ shoe }}
+      </mat-list-option>
+    </mat-selection-list>
+
+    <p>Option selected: {{ shoes.selectedOptions.selected }}</p> -->
+
+    <mat-selection-list #registros [multiple]="false">
+      <mat-list-option *ngFor="let pedido of pedidosList">
+        {{ pedido.paciente_id + " - " + pedido.tipo_exame_id }}
+      </mat-list-option>
+    </mat-selection-list>
+
+    <!-- Registro/render PDF -->
+    <div class="form-group">
+      <!-- lista de selecao -->
+      <input (change)="onFileSelected()" type="file" id="file" />
+
+      <!-- Finalizar registro -->
+      <button
+        class="mat-raised-button"
+        style="margin: 15px;"
+        type="submit"
+        (click)="finalizarRegistro()"
+      >
+        Finalizar registro
+      </button>
+
+      <!-- render do PDF -->
+      <pdf-viewer
+        [src]="pdfSrc"
+        [render-text]="true"
+        [original-size]="false"
+        [autoresize]="true"
+        style="display: block;"
+      ></pdf-viewer>
+    </div>
+  </form>
+</div>

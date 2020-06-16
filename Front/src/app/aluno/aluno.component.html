@@ -1,0 +1,22 @@
+<a>aluno - html</a>
+
+<div class="container">
+  <mat-selection-list [multiple]="false">
+    <mat-list-option *ngFor="let aluno of alunos">
+      <div>
+        {{aluno.cpf}} - {{aluno.nome}}
+      </div>
+    </mat-list-option>
+  </mat-selection-list>
+</div>
+
+<div class="container col-6">
+  <div class="container">
+    <button class="mat-raised-button" style="margin: 15px" [routerLink]="'cad-aluno'" routerLinkActive="active">Cadastrar</button>
+    <button class="mat-raised-button" style="margin: 15px" [routerLink]="'del-aluno'" routerLinkActive="active"> Deletar
+    </button>
+  </div>
+</div>
+
+
+<router-outlet></router-outlet>
