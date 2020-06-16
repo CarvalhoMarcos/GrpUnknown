@@ -65,6 +65,17 @@ module.exports = {
     }
 
   },
+  async validacaoCompleta(req, res) {
+    const { pedido_id } = req.body;
+    const [
+      results,
+      metadata,
+    ] = await database.query(`Select L.exame_id ,R.pedido_id ,R.pdf_id ,V.LAUDO_ID, V.ID as VALIDACAO_ID, V.DSC_DIAGN, V.CID FROM
+    VALIDACOES V JOIN LAUDOS_MEDICOS L ON (V.LAUDO_ID = L.ID) join registro_exames R on (R.id = L.exame_id) where R.pedido_id ='${pedido_id}'`);
+
+    return res.status(200).json(results);
+
+  },
 
   async update(req, res) { },
   async destroy(req, res) {

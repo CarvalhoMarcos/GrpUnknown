@@ -46,6 +46,8 @@ routes.delete("/laudosMedicos/:id?", LaudoMedicoController.destroy);
 
 routes.get("/validacoes", ValidacaoController.index);
 routes.post("/validacoes", ensureAuthenticated, ValidacaoController.store);
+routes.get("/validacaoCompleta", ValidacaoController.validacaoCompleta)
+
 
 
 routes.post("/login", SessionController.login);
