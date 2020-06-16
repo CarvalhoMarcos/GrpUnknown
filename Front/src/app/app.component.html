@@ -1,21 +1,7 @@
 <app-sidenav
   *ngIf="exibeNavBar()"
-  [title]="title"
-  [titulos]="[
-    'Médicos',
-    'Professores',
-    'Alunos',
-    'Paciente',
-    'Pedido Exame',
-    'Registro Exame'
-  ]"
-  [links]="[
-    'adm/med',
-    'adm/prof',
-    'adm/aluno',
-    'adm/paci',
-    'pedido',
-    'registro'
-  ]"
+  [title]= "title"
+  [titulos]= "titulos"
+  [links]= "links"
 ></app-sidenav>
 <router-outlet></router-outlet>

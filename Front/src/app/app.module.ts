@@ -52,6 +52,7 @@ import { AlunoPageComponent } from "./aluno-page/aluno-page.component";
 import { RegistrarExameComponent } from "./registrar-exame/registrar-exame.component";
 
 import { PdfViewerModule } from "ng2-pdf-viewer";
+import { ValidarLaudoMedicoComponent } from './validar-laudo-medico/validar-laudo-medico.component';
 
 @NgModule({
   declarations: [
@@ -73,7 +74,7 @@ import { PdfViewerModule } from "ng2-pdf-viewer";
     AlunoPageComponent,
     RegistrarExameComponent,
     CadastroPedidoExameComponent,
-    //ValidarLaudoMedicoComponent
+    ValidarLaudoMedicoComponent
   ],
   imports: [
     BrowserModule,

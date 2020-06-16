@@ -1,21 +1,19 @@
 <div class="container col-md-6">
   <form>
     <!-- Selecionar pedido-->
-    <mat-selection-list #shoes [multiple]="false">
+    <!-- <mat-selection-list #shoes [multiple]="false">
       <mat-list-option *ngFor="let shoe of typesOfShoes">
         {{ shoe }}
       </mat-list-option>
     </mat-selection-list>
 
-    <p>Option selected: {{ shoes.selectedOptions.selected }}</p>
+    <p>Option selected: {{ shoes.selectedOptions.selected }}</p> -->
 
-    <!-- <mat-selection-list #registros [multiple]="false">
-      <mat-list-option *ngFor="let registro of registrosList">
-        {{ registro.paciente_id }}
+    <mat-selection-list #registros [multiple]="false">
+      <mat-list-option *ngFor="let pedido of pedidosList">
+        {{ pedido.paciente_id + " - " + pedido.tipo_exame_id }}
       </mat-list-option>
     </mat-selection-list>
-
-    <p>Option selected: {{ registros.selectedOptions.selected }}</p> -->
 
     <!-- Registro/render PDF -->
     <div class="form-group">

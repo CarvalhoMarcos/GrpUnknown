@@ -2,9 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { AutenticacaoService } from './autenticacao.service';
 import { User, RetornoLogin, UsuarioPLogar } from './user';
-import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 import { Router } from '@angular/router';
-//import { Http } from '@angular/http';
+
 
 
 @Component({
@@ -52,7 +51,7 @@ export class LoginComponent implements OnInit {
       console.log(tipoUser);
       
       if(tipoUser === "M" ){
-        this.route.navigate(['adm']);
+        this.route.navigate(['med']);
       }else if(tipoUser === "R"){
         this.route.navigate(["aluno"]);
       }else if(tipoUser === "P"){
@@ -68,15 +67,6 @@ export class LoginComponent implements OnInit {
     });
 
   }
-  // onSubmit(){
-  // this.http.post('#',JSON.stringify(this.loginForm.value))
-  //               .map(res=>res)
-  //               .subscribe(dados =>{
-  //                 console.log(dados)
-  //                 this.loginForm.reset();
-  //               },
-  //               (error:any) => alert('erro'));
-  //}
 
 }
 

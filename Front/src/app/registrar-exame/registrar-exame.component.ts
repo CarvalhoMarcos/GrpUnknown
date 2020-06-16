@@ -22,9 +22,7 @@ export class RegistrarExameComponent implements OnInit {
   };
 
   responseCreate: ResponseCreateRegistroExame;
-
   responseRegistro: RegistroExame; //object ou any
-
   responseRegistros: ResponseRegistroExame;
 
   pedido_id: "";
@@ -34,16 +32,7 @@ export class RegistrarExameComponent implements OnInit {
   responsePedido: PedidoExame;
 
   // lista de seleção
-  registrosList: Object[];
-
-  // registros: Object[]; lista do tipo aberto fazer o if pra achar esses
-  typesOfShoes: string[] = [
-    "Boots",
-    "Clogs",
-    "Loafers",
-    "Moccasins",
-    "Sneakers",
-  ];
+  pedidosList : Object[];
 
   // upload e render do PDF
   pdfSrc = "";
@@ -68,7 +57,7 @@ export class RegistrarExameComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.getTodosRegistros();
+    this.getTodosPedidos();
   }
 
   getPedidoPacienteId() {
@@ -79,9 +68,15 @@ export class RegistrarExameComponent implements OnInit {
       });
   }
 
-  getTodosRegistros() {
-    this.registrarExameService.getAllRegistrosExame().subscribe((res) => {
-      this.registrosList = res;
+  // getTodosRegistros() {
+  //   this.registrarExameService.getAllRegistrosExame().subscribe((res) => {
+  //     this.registrosList = res;
+  //   });
+  // }
+
+  getTodosPedidos(){
+    this.pedidoExameService.getAllPedidoExame().subscribe((res) => {
+        this.pedidosList = res;
     });
   }
 

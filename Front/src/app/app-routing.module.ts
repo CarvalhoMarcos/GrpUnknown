@@ -27,6 +27,8 @@ import { DeletarPaciComponent } from "./paciente/deletar-paci/deletar-paci.compo
 import { MedPageComponent } from "./med-page/med-page.component";
 import { AlunoPageComponent } from "./aluno-page/aluno-page.component";
 import { RegistrarExameComponent } from "./registrar-exame/registrar-exame.component";
+import { ValidarLaudoMedicoComponent } from './validar-laudo-medico/validar-laudo-medico.component';
+import { LaudoMedicoComponent } from './laudo-medico/laudo-medico.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -66,19 +68,24 @@ const routes: Routes = [
     ],
   },
 
-  { path: "med", component: MedPageComponent },
   { path: "aluno", component: AlunoPageComponent },
+  { path: "aluno/registro", component: RegistrarExameComponent },
+  { path: "aluno/laudo", component: LaudoMedicoComponent },
 
-  { path: "registro", component: RegistrarExameComponent },
 
+  { path: "med", component: MedPageComponent },
+  { path: "med/validar", component: ValidarLaudoMedicoComponent },
   {
-    path: "pedido",
+    path: "med/pedido",
     component: PedidoExameComponent,
     children: [
       { path: "cad-pedido-exame", component: CadastroPedidoExameComponent },
-      { path: "col-pedico-exame", component: ConsultarPedidoExameComponent },
+      { path: "col-pedido-exame", component: ConsultarPedidoExameComponent },
     ],
   },
+
+  
+
 ];
 
 @NgModule({
