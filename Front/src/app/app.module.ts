@@ -34,10 +34,18 @@ import { DeletarPaciComponent } from "./paciente/deletar-paci/deletar-paci.compo
 
 import { MedComponent } from "./med/med.component";
 import { ProfComponent } from "./prof/prof.component";
+//import { RegistroExamesComponent } from './registro-exames/registro-exames.component';
 import { PedidoExameComponent } from "./pedido-exame/pedido-exame.component";
 import { ConsultarPedidoExameComponent } from "./pedido-exame/consultar-pedido-exame/consultar-pedido-exame.component";
 import { LaudoMedicoComponent } from "./laudo-medico/laudo-medico.component";
 import { ConsultarLaudoMedicoComponent } from "./laudo-medico/consultar-laudo-medico/consultar-laudo-medico.component";
+//import { ValidarLaudoMedicoComponent } from './laudo-medico/validar-laudo-medico/validar-laudo-medico.component';
+import { AutenticacaoService } from "./login/autenticacao.service";
+import { CadastroPedidoExameComponent } from "./pedido-exame/cadastro-pedido-exame/cadastro-pedido-exame.component";
+
+import { MatSelectModule } from "@angular/material/select";
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatInputModule } from "@angular/material/input";
 
 import { MedPageComponent } from "./med-page/med-page.component";
 import { AlunoPageComponent } from "./aluno-page/aluno-page.component";
@@ -64,6 +72,8 @@ import { PdfViewerModule } from "ng2-pdf-viewer";
     MedPageComponent,
     AlunoPageComponent,
     RegistrarExameComponent,
+    CadastroPedidoExameComponent,
+    //ValidarLaudoMedicoComponent
   ],
   imports: [
     BrowserModule,
@@ -84,9 +94,12 @@ import { PdfViewerModule } from "ng2-pdf-viewer";
     FormsModule,
     AlunoModule,
     AlunoRoutingModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    MatInputModule,
     PdfViewerModule,
   ],
-  providers: [],
+  providers: [AutenticacaoService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

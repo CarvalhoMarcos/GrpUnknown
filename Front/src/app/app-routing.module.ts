@@ -12,6 +12,9 @@ import { DeletarMedComponent } from "./med/deletar-med/deletar-med.component";
 import { AlunoComponent } from "./aluno/aluno.component";
 import { CadastroAlunoComponent } from "./aluno/cadastro-aluno/cadastro-aluno.component";
 import { DeletarAlunoComponent } from "./aluno/deletar-aluno/deletar-aluno.component";
+import { PedidoExameComponent } from "./pedido-exame/pedido-exame.component";
+import { CadastroPedidoExameComponent } from "./pedido-exame/cadastro-pedido-exame/cadastro-pedido-exame.component";
+import { ConsultarPedidoExameComponent } from "./pedido-exame/consultar-pedido-exame/consultar-pedido-exame.component";
 
 import { ProfComponent } from "./prof/prof.component";
 import { CadastroProfComponent } from "./prof/cadastro-prof/cadastro-prof.component";
@@ -67,6 +70,15 @@ const routes: Routes = [
   { path: "aluno", component: AlunoPageComponent },
 
   { path: "registro", component: RegistrarExameComponent },
+
+  {
+    path: "pedido",
+    component: PedidoExameComponent,
+    children: [
+      { path: "cad-pedido-exame", component: CadastroPedidoExameComponent },
+      { path: "col-pedico-exame", component: ConsultarPedidoExameComponent },
+    ],
+  },
 ];
 
 @NgModule({
